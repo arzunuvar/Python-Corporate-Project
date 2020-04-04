@@ -1,0 +1,60 @@
+{% extends "homebase.html" %}
+
+{% block title %} İletişim-{{ setting.company }} {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+
+{% block head %}
+   <link rel="shortcut icon" href="{{ setting.icon.url }}">
+ {% endblock %}
+
+
+{% block body %}
+
+ <!-- Start single page header -->
+  <section id="single-page-header">
+    <div class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="single-page-header-left">
+              <h2>İletişim</h2>
+              <p>İletişim Sayfasına Hoşgeldiniz..</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="single-page-header-right">
+              <ol class="breadcrumb">
+                <li><a href="/">Anasayfa</a></li>
+                <li class="active">İletisim</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End single page header -->
+    <!-- Start error section  -->
+  <section id="error">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="errror-page-area">
+            <h1 class="error-title"><span class="fa fa-bug"></span></h1>
+            <div class="error-content">
+
+               {{ setting.contact|safe }}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End error section  -->
+
+{% endblock %}
+
+
+
