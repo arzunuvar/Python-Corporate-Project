@@ -2,48 +2,27 @@
 <!-- Start slider -->
 <section id="slider">
     <div class="main-slider">
+        {% for rs in sliderdata %}
         <div class="single-slide">
-            <img src="../static/images/slider-1.jpg" alt="img">
+            <img src="{{ rs.image.url }}" alt="img">
             <div class="slide-content">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="slide-article">
-                                <h1 class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">Creative Design & Best Feature</h1>
-                                <p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.75s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since</p>
-                                <a class="read-more-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s" href="#">Read More</a>
+                                <h1 class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">{{ rs.title }}</h1>
+                                <p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.75s">{{ rs.description }}</p>
+                                <a class="read-more-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s" href="/content/{{ rs.id }}/{{ rs.slug }}">Daha Fazla İçerik</a>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            <div class="slider-img wow fadeInUp">
-                                <img src="../static/images/person1.png" alt="business man">
-                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="single-slide">
-            <img src="../static/images/slider-3.jpg" alt="img">
-            <div class="slide-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="slide-article">
-                                <h1 class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">We are Best Team & Support you always</h1>
-                                <p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.75s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since</p>
-                                <a class="read-more-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s" href="#">Read More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="slider-img wow fadeInUp">
-                                <img src="../static/images/person2.png" alt="business man">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </section>
 <!-- End slider -->

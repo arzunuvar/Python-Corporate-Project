@@ -42,8 +42,8 @@ class ContactFormMessage(models.Model):
         ('Read', 'Read'),
         ('Closed', 'Closed'),
      )
-     name= models.CharField(blank=True, max_length=20)
-     email= models.CharField(blank=True, max_length=50)
+     name = models.CharField(blank=True, max_length=20)
+     email = models.CharField(blank=True, max_length=50)
      subject = models.CharField(blank=True, max_length=50)
      message = models.CharField(blank=True, max_length=255)
      status = models.CharField(max_length=10,choices=STATUS,default='New')
