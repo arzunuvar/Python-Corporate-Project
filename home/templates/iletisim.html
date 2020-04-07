@@ -5,70 +5,94 @@
 {% block description %} {{ setting.description }} {% endblock %}
 
 {% block head %}
-   <link rel="shortcut icon" href="{{ setting.icon.url }}">
- {% endblock %}
+    <link rel="shortcut icon" href="{{ setting.icon.url }}">
+{% endblock %}
 
 
 {% block body %}
 
- <!-- Start single page header -->
-  <section id="single-page-header">
-    <div class="overlay">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-sm-6 col-xs-12">
-            <div class="single-page-header-left">
-              <h2>İLETİŞİM</h2>
-              <p>İletişim Sayfasına Hoşgeldiniz..</p>
+    <!-- Start single page header -->
+    <section id="single-page-header">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="single-page-header-left">
+                            <h2>İLETİŞİM</h2>
+                            <p>İletişim Sayfasına Hoşgeldiniz..</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="single-page-header-right">
+                            <ol class="breadcrumb">
+                                <li><a href="/">Anasayfa</a></li>
+                                <li class="active">İletişim</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-12">
-            <div class="single-page-header-right">
-              <ol class="breadcrumb">
-                <li><a href="/">Anasayfa</a></li>
-                <li class="active">İletişim</li>
-              </ol>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- End single page header -->
+    </section>
+    <!-- End single page header -->
 
-    {% if messages %}
-        {% for message in messages %}
-            <div class="alert alert-{{ message.tags }}" role="alert">
-                {{ message }}
+    <!-- Start contact section  -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-area">
+                        <h2 class="title">İLETİŞİM FORMU</h2>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="cotact-area">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="contact-area-left">
+                                    {{ setting.contact|safe }}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="contact-area-right">
+                                    {% if messages %}
+                                        {% for message in messages %}
+                                            <div class="alert alert-{{ message.tags }}" role="alert">
+                                                {{ message }}
+                                            </div>
+                                        {% endfor %}
+                                    {% endif %}
+                                    <form action="" method="post" class="comments-form contact-form">
+                                        {% csrf_token %}
+                                        <div class="form-group">
+                                            <input type="text" name="name" class="form-control"
+                                                   placeholder="Name &amp; Surname" maxlength="20">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="form-control"
+                                                   placeholder="Email Address" maxlength="50">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="subject" class="form-control" placeholder="Subject"
+                                                   maxlength="50">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea name="message" cols="40" rows="10" placeholder="Your Message"
+                                                      maxlength="255" class="form-control"></textarea>
+                                        </div>
+                                        <input type="submit" class="comment-btn" value="SEND FORM">
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        {% endfor %}
-    {% endif %}
-
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="SEND FORM">
-    </form>
-
-
-    <!-- Start error section  -->
-  <section id="error">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="errror-page-area">
-            <h1 class="error-title"><span class="fa fa-bug"></span></h1>
-            <div class="error-content">
-
-               {{ setting.contact|safe }}
-
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- End error section  -->
+    </section>
+    <!-- End contact section  -->
 
 {% endblock %}
 

@@ -11,7 +11,7 @@ def index(request):
     sliderdata = Content.objects.all()[:4]
     context = {'setting': setting,
                'page': 'home',
-               'sliderdata':sliderdata}
+               'sliderdata': sliderdata}
     return render(request, 'index.html', context)
 
 
@@ -28,19 +28,18 @@ def referanslar(request):
 
 
 def iletisim(request):
-
-    if request.method == 'POST': # form post edildiyse
+    if request.method == 'POST':  # form post edildiyse
         form = ContactFormu(request.POST)
         if form.is_valid():
-            data = ContactFormMessage() # model ile bağlantı kur
-            data.name = form.cleaned_data['name'] # formdan bilgiyi al
+            data = ContactFormMessage()  # model ile bağlantı kur
+            data.name = form.cleaned_data['name']  # formdan bilgiyi al
             data.email = form.cleaned_data['email']
             data.subject = form.cleaned_data['subject']
             data.message = form.cleaned_data['message']
             data.ip = request.META.get('REMOTE_ADDR')
-            data.save() # veritabanına kaydet
+            data.save()  # veritabanına kaydet
             messages.success(request, "Mesajınız başarı ile gönderilmiştir.Teşekkür Ederiz ")
-            return HttpResponseRedirect ('/iletisim')
+            return HttpResponseRedirect('/iletisim')
 
     setting = Setting.objects.get(pk=1)
     form = ContactFormu()
