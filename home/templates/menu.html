@@ -5,7 +5,8 @@
         <div class="container">
             <div class="navbar-header">
                 <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -13,7 +14,7 @@
                 </button>
                 <!-- LOGO -->
                 <!-- TEXT BASED LOGO -->
-                <a class="navbar-brand" href="index.html">Intensely</a>
+                <a class="navbar-brand" href="index.html">NEVA BİLİŞİM</a>
                 <!-- IMG BASED LOGO  -->
                 <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="logo"></a> -->
             </div>
@@ -21,12 +22,32 @@
                 <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
                     <li class="active"><a href="/">ANASAYFA</a></li>
                     <li><a href="/hakkimizda">HAKKIMIZDA</a></li>
-                    <li><a href="service.html">Service</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="service.html">SERVİSLER</a></li>
+                    <li><a href="portfolio.html">GALERİ</a></li>
+
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <span class="fa fa-angle-down"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">KATEGORİLER<span
+                                class="fa fa-angle-down"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="blog-archive.html">Blog Archive</a></li>
+
+                            {% load mptt_tags %}
+
+                            {% recursetree category %}
+                                <li {% if not node.is_leaf_node %} class="dropdown" {% endif %}>
+                                <a href="/category/{{ node.slug }}" >{{ node.title }}<span
+                                      {% if not node.is_leaf_node %}  class="fa fa-angle-down" {% endif %} ></span></a>
+
+                                {% if not node.is_leaf_node %}
+                                    <ul class="dropdown-menu">
+
+                                        <li><a href="/category/{{ node.slug }}">{{ children }}</a></li>
+
+                                    </ul>
+                                {% endif %}
+                                </li>
+                            {% endrecursetree %}
+
+                            <li><a href="blog-archive.html">Blog Arşivi</a></li>
                             <li><a href="blog-single-with-left-sidebar.html">Blog Single with Left Sidebar</a></li>
                             <li><a href="blog-single-with-right-sidebar.html">Blog Single with Right Sidebar</a></li>
                             <li><a href="blog-single-with-out-sidebar.html">Blog Single with out Sidebar</a></li>
