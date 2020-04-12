@@ -11,24 +11,24 @@
     <meta name="keywords" content="{% block keywords %} Anasayfa anahtar kelimeler {% endblock %}">
     <meta name="description" content="{% block description %} Anasayfa kısa açıklama {% endblock %}">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/icon" href="../static/images/favicon.ico"/>
+    <link rel="shortcut icon" type="image/icon" href="{% static 'images/favicon.ico'%}"/>
     <!-- Font Awesome -->
-    <link href="../static/css/font-awesome.css" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.css'%}" rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css'%}" rel="stylesheet">
     <!-- Slick slider -->
-    <link rel="stylesheet" type="text/css" href="../static/css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/slick.css'%}"/>
     <!-- Fancybox slider -->
-    <link rel="stylesheet" href="../static/css/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.css'%}" type="text/css" media="screen" />
     <!-- Animate css -->
-    <link rel="stylesheet" type="text/css" href="../static/css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css'%}"/>
     <!-- Progress bar  -->
-    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap-progressbar-3.3.4.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-progressbar-3.3.4.css'%}"/>
     <!-- Theme color -->
-    <link id="switcher" href="../static/css/theme-color/default-theme.css" rel="stylesheet">
+    <link id="switcher" href="{% static 'css/theme-color/default-theme.css'%}" rel="stylesheet">
 
     <!-- Main Style -->
-    <link href="../static/style.css" rel="stylesheet">
+    <link href="{% static 'style.css'%}" rel="stylesheet">
 
     <!-- Fonts -->
 
@@ -50,10 +50,7 @@
  {% include "menu.html" %}
     {% block body %}
 
-
     {% include "content.html" %}
-
-
 
     {% endblock %}
 {% include 'footer.html' %}

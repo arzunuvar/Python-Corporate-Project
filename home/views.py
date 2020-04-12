@@ -19,13 +19,15 @@ def index(request):
 
 def hakkimizda(request):
     setting = Setting.objects.get(pk=1)
-    context = {'setting': setting, 'page': 'hakkimizda'}
+    category = Category.objects.all()
+    context = {'setting': setting, 'page': 'hakkimizda', 'category': category}
     return render(request, 'hakkimizda.html', context)
 
 
 def referanslar(request):
     setting = Setting.objects.get(pk=1)
-    context = {'setting': setting, 'page': 'referanslar'}
+    category = Category.objects.all()
+    context = {'setting': setting, 'page': 'referanslar', 'category': category}
     return render(request, 'referanslarimiz.html', context)
 
 
@@ -44,6 +46,32 @@ def iletisim(request):
             return HttpResponseRedirect('/iletisim')
 
     setting = Setting.objects.get(pk=1)
+    category = Category.objects.all()
     form = ContactFormu()
-    context = {'setting': setting, 'form': form}
+    context = {'setting': setting, 'form': form, 'category': category}
     return render(request, 'iletisim.html', context)
+
+
+def categories(request, id, slug):
+    # setting = Setting.objects.get(pk=1)
+    category = Category.objects.all()
+    categorydata = Category.objects.get(pk=id)
+    contents = Content.objects.filter(category_id=id)
+
+    context = {'categories': categories,
+               'category': category,
+               'contents': contents,
+               'categorydata': categorydata
+               }
+    return render(request, 'categories.html', context)
+
+
+def content_detail(request, id, slug):
+    # setting = Setting.objects.get(pk=1)
+    category = Category.objects.all()
+    content = Content.objects.get(pk=id)
+
+    context = {
+        'content': content, 'slug': slug, 'category': category
+    }
+    return render(request, 'content_detail.html', context)

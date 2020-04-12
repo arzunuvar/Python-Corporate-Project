@@ -1,21 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65503a97-3b8b-4221-a9d5-251c029d71c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/uploads/images/images_1_Bxw7Aul_hbe5Dr6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/images_1_k8xCTHW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/indir_1_EnjjpFN.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/indir_Gh97KJ3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/indir_I9cug1t_p4Zm39j.jpg" afterDir="false" />
+    <list default="true" id="5f492e10-93bd-4168-9341-f6a435dd07e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/DjangoProje.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/categories.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/content_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/company_N3LW1hy_lfWJZz6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_vAZAS90.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_1jne46u.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_3_YtjKlOK_UbM2SLl.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_4_JNeZtMg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_4_oXEhsll.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_4_oXEhsll_AQwZDm6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_Gh97KJ3_DjlvhSP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_zV3TosB.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/şirket_7Gzjdvy_uYMAj9u.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/arzu_unuvar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pythonProje.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/content/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/content/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pythonProje/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProje/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pythonProje/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProje/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,35 +46,40 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db.sqlite3" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db.sqlite3" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db.sqlite3" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1YhzFHXcWwR7O7ua9qA7kBCdrhs" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1aRWx8WFSdEJOqgJKfQwerG7sjE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -71,34 +89,11 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\OzelKonular2\DjangoProje\home\templates" />
-      <recent name="C:\Python38\pythonProje\content" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.models">
-    <configuration name="models" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="pythonProje" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/content" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/content/models.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pythonProje" type="Python.DjangoServer" factoryName="Django server">
-      <module name="pythonProje" />
+  <component name="RunManager">
+    <configuration name="DjangoProje" type="Python.DjangoServer" factoryName="Django server">
+      <module name="DjangoProje" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -120,90 +115,40 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.models" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="65503a97-3b8b-4221-a9d5-251c029d71c4" name="Default Changelist" comment="" />
-      <created>1583409508318</created>
+      <changelist id="5f492e10-93bd-4168-9341-f6a435dd07e5" name="Default Changelist" comment="" />
+      <created>1586699133652</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1583409508318</updated>
-      <workItem from="1583409509771" duration="31000" />
-      <workItem from="1583835641682" duration="57000" />
-      <workItem from="1584467512870" duration="92000" />
-      <workItem from="1584467645717" duration="10749000" />
-      <workItem from="1584536146546" duration="5631000" />
-      <workItem from="1584552182502" duration="641000" />
-      <workItem from="1584639132283" duration="1334000" />
-      <workItem from="1584641340493" duration="9773000" />
-      <workItem from="1584788333945" duration="629000" />
-      <workItem from="1584816260148" duration="11719000" />
-      <workItem from="1584906317815" duration="4120000" />
-      <workItem from="1584985568256" duration="679000" />
-      <workItem from="1584995086138" duration="1220000" />
-      <workItem from="1585051069253" duration="43000" />
-      <workItem from="1585051957889" duration="826000" />
-      <workItem from="1585074733702" duration="10400000" />
-      <workItem from="1585137989323" duration="212000" />
-      <workItem from="1585140143348" duration="4086000" />
-      <workItem from="1585221446985" duration="612000" />
-      <workItem from="1585234078215" duration="3981000" />
-      <workItem from="1585247509168" duration="5265000" />
-      <workItem from="1585254059195" duration="1838000" />
-      <workItem from="1585256598803" duration="6284000" />
-      <workItem from="1585328799780" duration="626000" />
-      <workItem from="1585342425146" duration="1452000" />
-      <workItem from="1585344915543" duration="287000" />
-      <workItem from="1585485004597" duration="230000" />
-      <workItem from="1585749212270" duration="2333000" />
-      <workItem from="1585753128944" duration="911000" />
-      <workItem from="1585765631795" duration="3279000" />
-      <workItem from="1585821818151" duration="320000" />
-      <workItem from="1585825864343" duration="3361000" />
-      <workItem from="1585829443181" duration="595000" />
-      <workItem from="1585830148589" duration="123000" />
-      <workItem from="1585830455127" duration="1120000" />
-      <workItem from="1585910541991" duration="1411000" />
-      <workItem from="1585931289475" duration="8382000" />
-      <workItem from="1586002980468" duration="3461000" />
-      <workItem from="1586007165997" duration="374000" />
-      <workItem from="1586084104157" duration="9773000" />
-      <workItem from="1586107581703" duration="8368000" />
-      <workItem from="1586121101931" duration="33000" />
-      <workItem from="1586257088502" duration="1999000" />
-      <workItem from="1586344212390" duration="289000" />
-      <workItem from="1586529473608" duration="1370000" />
-      <workItem from="1586539545736" duration="9062000" />
-      <workItem from="1586602638306" duration="12091000" />
+      <updated>1586699133652</updated>
+      <workItem from="1586699174493" duration="567000" />
+      <workItem from="1586699856125" duration="4559000" />
+      <workItem from="1586709561267" duration="1435000" />
+      <workItem from="1586712685566" duration="78000" />
+      <workItem from="1586716073145" duration="2673000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="456" y="142" key="FileChooserDialogImpl" timestamp="1585830593727">
+    <state x="275" y="26" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586716931281">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="456" y="142" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1585830593727" />
-    <state x="182" y="0" key="SettingsEditor" timestamp="1585830674776">
+    <state x="275" y="26" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1586716931281" />
+    <state x="463" y="122" key="FileChooserDialogImpl" timestamp="1586716877682">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="182" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1585830674776" />
-    <state x="378" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1585328814089">
+    <state x="463" y="122" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1586716877682" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1586699250392">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="378" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1585328814089" />
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1586699250392" />
   </component>
 </project>

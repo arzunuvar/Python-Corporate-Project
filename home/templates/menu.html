@@ -34,23 +34,23 @@
 
                             {% recursetree category %}
                                 <li {% if not node.is_leaf_node %} class="dropdown" {% endif %}>
-                                <a href="/category/{{ node.slug }}" >{{ node.title }}<span
+                                <a href="/category/{{ node.id }}/{{ node.slug }}" >{{ node.title }}<span
                                       {% if not node.is_leaf_node %}  class="fa fa-angle-down" {% endif %} ></span></a>
 
                                 {% if not node.is_leaf_node %}
                                     <ul class="dropdown-menu">
 
-                                        <li><a href="/category/{{ node.slug }}">{{ children }}</a></li>
+                                        <li><a href="/category/{{ node.id }}/{{ node.slug }}">{{ children }}</a></li>
 
                                     </ul>
                                 {% endif %}
                                 </li>
                             {% endrecursetree %}
 
-                            <li><a href="blog-archive.html">Blog Arşivi</a></li>
-                            <li><a href="blog-single-with-left-sidebar.html">Blog Single with Left Sidebar</a></li>
-                            <li><a href="blog-single-with-right-sidebar.html">Blog Single with Right Sidebar</a></li>
-                            <li><a href="blog-single-with-out-sidebar.html">Blog Single with out Sidebar</a></li>
+                            <li><a href="blog-archive.html">BLOG ARŞİVİ1</a></li>
+                            <li><a href="blog-single-with-left-sidebar.html">BLOG ARŞİVİ2</a></li>
+                            <li><a href="blog-single-with-right-sidebar.html">BLOG ARŞİVİ3</a></li>
+                            <li><a href="blog-single-with-out-sidebar.html">BLOG ARŞİVİ4</a></li>
                         </ul>
                     </li>
                     <li><a href="/referanslar">REFERANSLAR</a></li>

@@ -1,0 +1,15 @@
+{% extends "homebase.html" %}
+{% block title %} {{ content.title }} Contents {% endblock %}
+{% block keywords %} {{ content.keywords }} {% endblock %}
+{% block description %} {{ content.description }} {% endblock %}
+
+{% block head %}
+    <link rel="shortcut icon" href="{{ setting.icon.url }}">
+{% endblock %}
+
+{% block body %}
+    <h1> Content Name : {{ content.title }} Slug :{{ slug }}</h1>
+{% endblock %}
+
+
+
