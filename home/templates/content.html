@@ -161,7 +161,6 @@
 </section>
 <!-- End Service -->
 
-
 <!-- Start Pricing table -->
 <section id="our-team">
     <div class="container">
@@ -337,65 +336,27 @@
                 <div class="latest-news-content">
                     <div class="row">
                         <!-- start single latest news -->
-                        <div class="col-md-4">
-                            <article class="blog-news-single">
-                                <div class="blog-news-img">
-                                    <a href="blog-single-with-right-sidebar.html"><img
-                                            src="../static/images/blog-img-1.jpg" alt="image"></a>
-                                </div>
-                                <div class="blog-news-title">
-                                    <h2><a href="blog-single-with-right-sidebar.html">All about writing story</a></h2>
-                                    <p>By <a class="blog-author" href="#">John Powell</a> <span class="blog-date">|18 October 2015</span>
-                                    </p>
-                                </div>
-                                <div class="blog-news-details">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the</p>
-                                    <a class="blog-more-btn" href="blog-single-with-right-sidebar.html">Read More <i
-                                            class="fa fa-long-arrow-right"></i></a>
-                                </div>
-                            </article>
-                        </div>
-                        <!-- start single latest news -->
-                        <div class="col-md-4">
-                            <article class="blog-news-single">
-                                <div class="blog-news-img">
-                                    <a href="blog-single-with-right-sidebar.html"><img
-                                            src="../static/images/blog-img-2.jpg" alt="image"></a>
-                                </div>
-                                <div class="blog-news-title">
-                                    <h2><a href="blog-single-with-right-sidebar.html">Best Mobile Device</a></h2>
-                                    <p>By <a class="blog-author" href="#">John Powell</a> <span class="blog-date">|18 October 2015</span>
-                                    </p>
-                                </div>
-                                <div class="blog-news-details">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the</p>
-                                    <a class="blog-more-btn" href="blog-single-with-right-sidebar.html">Read More <i
-                                            class="fa fa-long-arrow-right"></i></a>
-                                </div>
-                            </article>
-                        </div>
-                        <!-- start single latest news -->
-                        <div class="col-md-4">
-                            <article class="blog-news-single">
-                                <div class="blog-news-img">
-                                    <a href="blog-single-with-right-sidebar.html"><img
-                                            src="../static/images/blog-img-3.jpg" alt="image"></a>
-                                </div>
-                                <div class="blog-news-title">
-                                    <h2><a href="blog-single-with-right-sidebar.html">Personal Note Details</a></h2>
-                                    <p>By <a class="blog-author" href="#">John Powell</a> <span class="blog-date">|18 October 2015</span>
-                                    </p>
-                                </div>
-                                <div class="blog-news-details">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the</p>
-                                    <a class="blog-more-btn" href="blog-single-with-right-sidebar.html">Read More <i
-                                            class="fa fa-long-arrow-right"></i></a>
-                                </div>
-                            </article>
-                        </div>
+                        {% for rs in latestcontents %}
+                            <div class="col-md-4">
+                                <article class="blog-news-single">
+                                    <div class="blog-news-img">
+                                        <a href="blog-single-with-right-sidebar.html">
+                                            <img src="{{ rs.image.url }}" alt="image"></a>
+                                    </div>
+                                    <div class="blog-news-title">
+                                        <h2><a href="blog-single-with-right-sidebar.html">{{ rs.title }}</a></h2>
+                                        <a class="blog-author" href="#">{{ rs.slug }}</a> <span class="blog-date">{{ rs.id }}</span>
+                                    </div>
+                                    <div class="blog-news-details">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                            Ipsum has been the industry's standard dummy text ever since the</p>
+                                        <a class="blog-more-btn" href="blog-single-with-right-sidebar.html">Read More <i
+                                                class="fa fa-long-arrow-right"></i></a>
+                                    </div>
+                                </article>
+                            </div>
+                        {% endfor %}
+
                     </div>
                 </div>
             </div>
@@ -423,65 +384,27 @@
                 <div class="latest-news-content">
                     <div class="row">
                         <!-- start single latest news -->
-                        <div class="col-md-4">
-                            <article class="blog-news-single">
-                                <div class="blog-news-img">
-                                    <a href="blog-single-with-right-sidebar.html"><img
-                                            src="../static/images/blog-img-1.jpg" alt="image"></a>
-                                </div>
-                                <div class="blog-news-title">
-                                    <h2><a href="blog-single-with-right-sidebar.html">All about writing story</a></h2>
-                                    <p>By <a class="blog-author" href="#">John Powell</a> <span class="blog-date">|18 October 2015</span>
-                                    </p>
-                                </div>
-                                <div class="blog-news-details">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the</p>
-                                    <a class="blog-more-btn" href="blog-single-with-right-sidebar.html">Read More <i
-                                            class="fa fa-long-arrow-right"></i></a>
-                                </div>
-                            </article>
-                        </div>
-                        <!-- start single latest news -->
-                        <div class="col-md-4">
-                            <article class="blog-news-single">
-                                <div class="blog-news-img">
-                                    <a href="blog-single-with-right-sidebar.html"><img
-                                            src="../static/images/blog-img-2.jpg" alt="image"></a>
-                                </div>
-                                <div class="blog-news-title">
-                                    <h2><a href="blog-single-with-right-sidebar.html">Best Mobile Device</a></h2>
-                                    <p>By <a class="blog-author" href="#">John Powell</a> <span class="blog-date">|18 October 2015</span>
-                                    </p>
-                                </div>
-                                <div class="blog-news-details">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the</p>
-                                    <a class="blog-more-btn" href="blog-single-with-right-sidebar.html">Read More <i
-                                            class="fa fa-long-arrow-right"></i></a>
-                                </div>
-                            </article>
-                        </div>
-                        <!-- start single latest news -->
-                        <div class="col-md-4">
-                            <article class="blog-news-single">
-                                <div class="blog-news-img">
-                                    <a href="blog-single-with-right-sidebar.html"><img
-                                            src="../static/images/blog-img-3.jpg" alt="image"></a>
-                                </div>
-                                <div class="blog-news-title">
-                                    <h2><a href="blog-single-with-right-sidebar.html">Personal Note Details</a></h2>
-                                    <p>By <a class="blog-author" href="#">John Powell</a> <span class="blog-date">|18 October 2015</span>
-                                    </p>
-                                </div>
-                                <div class="blog-news-details">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the</p>
-                                    <a class="blog-more-btn" href="blog-single-with-right-sidebar.html">Read More <i
-                                            class="fa fa-long-arrow-right"></i></a>
-                                </div>
-                            </article>
-                        </div>
+                        {% for rs in newscontents %}
+                            <div class="col-md-4">
+                                <article class="blog-news-single">
+                                    <div class="blog-news-img">
+                                        <a href="blog-single-with-right-sidebar.html">
+                                            <img src="{{ rs.image.url }}" alt="image"></a>
+                                    </div>
+                                    <div class="blog-news-title">
+                                        <h2><a href="blog-single-with-right-sidebar.html">{{ rs.title }}</a></h2>
+                                        <a class="blog-author" href="#">{{ rs.slug }}</a> <span class="blog-date">{{ rs.id }}</span>
+                                    </div>
+                                    <div class="blog-news-details">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                            Ipsum has been the industry's standard dummy text ever since the</p>
+                                        <a class="blog-more-btn" href="blog-single-with-right-sidebar.html">Read More <i
+                                                class="fa fa-long-arrow-right"></i></a>
+                                    </div>
+                                </article>
+                            </div>
+                        {% endfor %}
+
                     </div>
                 </div>
             </div>
@@ -507,65 +430,27 @@
                 <div class="latest-news-content">
                     <div class="row">
                         <!-- start single latest news -->
-                        <div class="col-md-4">
-                            <article class="blog-news-single">
-                                <div class="blog-news-img">
-                                    <a href="blog-single-with-right-sidebar.html"><img
-                                            src="../static/images/blog-img-1.jpg" alt="image"></a>
-                                </div>
-                                <div class="blog-news-title">
-                                    <h2><a href="blog-single-with-right-sidebar.html">All about writing story</a></h2>
-                                    <p>By <a class="blog-author" href="#">John Powell</a> <span class="blog-date">|18 October 2015</span>
-                                    </p>
-                                </div>
-                                <div class="blog-news-details">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the</p>
-                                    <a class="blog-more-btn" href="blog-single-with-right-sidebar.html">Read More <i
-                                            class="fa fa-long-arrow-right"></i></a>
-                                </div>
-                            </article>
-                        </div>
-                        <!-- start single latest news -->
-                        <div class="col-md-4">
-                            <article class="blog-news-single">
-                                <div class="blog-news-img">
-                                    <a href="blog-single-with-right-sidebar.html"><img
-                                            src="../static/images/blog-img-2.jpg" alt="image"></a>
-                                </div>
-                                <div class="blog-news-title">
-                                    <h2><a href="blog-single-with-right-sidebar.html">Best Mobile Device</a></h2>
-                                    <p>By <a class="blog-author" href="#">John Powell</a> <span class="blog-date">|18 October 2015</span>
-                                    </p>
-                                </div>
-                                <div class="blog-news-details">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the</p>
-                                    <a class="blog-more-btn" href="blog-single-with-right-sidebar.html">Read More <i
-                                            class="fa fa-long-arrow-right"></i></a>
-                                </div>
-                            </article>
-                        </div>
-                        <!-- start single latest news -->
-                        <div class="col-md-4">
-                            <article class="blog-news-single">
-                                <div class="blog-news-img">
-                                    <a href="blog-single-with-right-sidebar.html"><img
-                                            src="../static/images/blog-img-3.jpg" alt="image"></a>
-                                </div>
-                                <div class="blog-news-title">
-                                    <h2><a href="blog-single-with-right-sidebar.html">Personal Note Details</a></h2>
-                                    <p>By <a class="blog-author" href="#">John Powell</a> <span class="blog-date">|18 October 2015</span>
-                                    </p>
-                                </div>
-                                <div class="blog-news-details">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the</p>
-                                    <a class="blog-more-btn" href="blog-single-with-right-sidebar.html">Read More <i
-                                            class="fa fa-long-arrow-right"></i></a>
-                                </div>
-                            </article>
-                        </div>
+                        {% for rs in randomcontents %}
+                            <div class="col-md-4">
+                                <article class="blog-news-single">
+                                    <div class="blog-news-img">
+                                        <a href="blog-single-with-right-sidebar.html">
+                                            <img src="{{ rs.image.url }}" alt="image"></a>
+                                    </div>
+                                    <div class="blog-news-title">
+                                        <h2><a href="blog-single-with-right-sidebar.html">{{ rs.title }}</a></h2>
+                                        <a class="blog-author" href="#">{{ rs.slug }}</a> <span class="blog-date">{{ rs.id }}</span>
+                                    </div>
+                                    <div class="blog-news-details">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                            Ipsum has been the industry's standard dummy text ever since the</p>
+                                        <a class="blog-more-btn" href="blog-single-with-right-sidebar.html">Read More <i
+                                                class="fa fa-long-arrow-right"></i></a>
+                                    </div>
+                                </article>
+                            </div>
+                        {% endfor %}
+
                     </div>
                 </div>
             </div>

@@ -2,33 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f492e10-93bd-4168-9341-f6a435dd07e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/DjangoProje.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/templates/categories.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/templates/content_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/company_N3LW1hy_lfWJZz6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/images_vAZAS90.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/indir_1jne46u.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/indir_3_YtjKlOK_UbM2SLl.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/indir_4_JNeZtMg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/indir_4_oXEhsll.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/indir_4_oXEhsll_AQwZDm6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/indir_Gh97KJ3_DjlvhSP.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/indir_zV3TosB.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/şirket_7Gzjdvy_uYMAj9u.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/arzu_unuvar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pythonProje.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pythonProje/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProje/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +107,9 @@
       <workItem from="1586699856125" duration="4559000" />
       <workItem from="1586709561267" duration="1435000" />
       <workItem from="1586712685566" duration="78000" />
-      <workItem from="1586716073145" duration="2673000" />
+      <workItem from="1586716073145" duration="3748000" />
+      <workItem from="1586782639496" duration="1952000" />
+      <workItem from="1586800038734" duration="5306000" />
     </task>
     <servers />
   </component>
