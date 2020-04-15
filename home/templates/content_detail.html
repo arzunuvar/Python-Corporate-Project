@@ -8,7 +8,79 @@
 {% endblock %}
 
 {% block body %}
-    <h1> Content Name : {{ content.title }} Slug :{{ slug }}</h1>
+    <!-- Start single page header -->
+    <section id="single-page-header">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="single-page-header-left">
+                            <h2>Açıklama</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="single-page-header-right">
+                            <ol class="breadcrumb">
+                                <li><a href="#">Home</a></li>
+                                <li class="active">Açıklama</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End single page header -->
+
+    <!-- Start blog archive -->
+    <section id="blog-archive">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="blog-archive-area">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="blog-archive-left">
+                                    <!-- Start blog news single -->
+                                    <article class="blog-news-single">
+                                        <div class="blog-news-img">
+                                            <a href="blog-single-with-right-sidebar.html"><img src="{{ content.image.url }}" alt="image"></a>
+                                        </div>
+                                        <div class="blog-news-title">
+                                            <h2><a href="blog-single-with-right-sidebar.html">{{ content.title }}y</a></h2>
+                                            <a class="blog-author" href="#">{{ content.slug }}</a> <span class="blog-date">{{ content.title }}</span>
+                                        </div>
+                                        <div class="blog-news-details">
+                                            <p>{{ content.description }}</p>
+                                            <a class="blog-more-btn" href="blog-single-with-right-sidebar.html">Read More <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </article>
+                                    <!-- Start blog news single -->
+                                    <article class="blog-news-single">
+                                        {% for rs in images %}
+                                        <div class="blog-news-img">
+                                            <a href="blog-single-with-right-sidebar.html"><img src="{{ rs.image.url }}" alt="image"></a>
+                                        </div>
+                                        {% endfor %}
+                                        <div class="blog-news-title">
+                                            <h2><a href="blog-single-with-right-sidebar.html">{{ content.title }}</a></h2>
+                                            <p>By <a class="blog-author" href="#">{{ content.slug }}</a> <span class="blog-date">{{ content.id }}</span></p>
+                                        </div>
+                                        <div class="blog-news-details">
+                                            <p>{{ content.description }}</p>
+                                            <a class="blog-more-btn" href="blog-single-with-right-sidebar.html">Read More <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 {% endblock %}
 
 
