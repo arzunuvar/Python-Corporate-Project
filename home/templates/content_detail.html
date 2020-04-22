@@ -18,7 +18,7 @@
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="single-page-header-left">
                             <h2>Açıklama</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                            <p>Açıklama Sayfasına Hoşgeldiniz..</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -267,32 +267,31 @@
                                             <div class="tab-pane fade active in" id="reviews">
 
                                                 <div class="response-area">
-                                                    <h2>3 RESPONSES</h2>
+                                                    <h2>RESPONSES</h2>
                                                     <ul class="media-list">
                                                         {% for com in comments %}
-                                                        <li class="media">
+                                                            <li class="media">
 
-                                                            <a class="pull-left" href="#">
-                                                                <img class="media-object" src="{{ content.image.url }}"
-                                                                     alt="User image" style=" height: 100px;width: 100px">
-                                                            </a>
-                                                            <div class="media-body">
-                                                                <ul class="sinlge-post-meta">
-                                                                    <li><i class="fa fa-user"></i>{{ com.user.first_name }} {{ com.user.last_name }}</li>
-                                                                    <li><i class="fa fa-clock-o"></i> {{ com.create_at }}</li>
-                                                                    <li><i class="fa fa-calendar"></i> {{ com.create_at }}</li>
-                                                                </ul>
-                                                                <h5>Subject:{{ com.subject }}</h5>
-                                                                <p>{{ com.comment }}</p>
-                                                                <a class="btn" href=""><i
-                                                                        class="fa fa-reply"></i>Replay</a>
-                                                            </div>
-                                                        </li>
+                                                                <a class="pull-left" href="#">
+                                                                    <img class="media-object" src="{{ content.image.url }}"
+                                                                         alt="User image" style=" height: 100px;width: 100px">
+                                                                </a>
+                                                                <div class="media-body">
+                                                                    <ul class="sinlge-post-meta">
+                                                                        <li><i class="fa fa-user"></i>{{ com.user.first_name }} {{ com.user.last_name }}</li>
+                                                                        <li><i class="fa fa-clock-o"></i> {{ com.create_at }}</li>
+                                                                        <li><i class="fa fa-calendar"></i> {{ com.create_at }}</li>
+                                                                    </ul>
+                                                                    <h5>Subject:{{ com.subject }}</h5>
+                                                                    <p>{{ com.comment }}</p>
+                                                                    <a class="btn" href=""><i
+                                                                            class="fa fa-reply"></i>Replay</a>
+                                                                </div>
+                                                            </li>
                                                         {% endfor %}
 
                                                     </ul>
                                                 </div><!--/Response-area-->
-
 
                                                 <div class="col-sm-12">
                                                     <ul>
@@ -321,7 +320,6 @@
                                                         {% csrf_token %}
                                                         <span>
 											<input type="text" name="subject" placeholder="Subject"/>
-
 										</span>
                                                         <textarea name="comment"
                                                                   placeholder="Type your comment here"></textarea>
@@ -354,11 +352,8 @@
                                                     </form>
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div><!--/category-tab-->
-
-
                                 </div>
                             </div>
                         </div>

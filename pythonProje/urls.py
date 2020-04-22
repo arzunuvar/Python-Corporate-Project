@@ -31,6 +31,7 @@ urlpatterns = [
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('category/<int:id>/<slug:slug>/', views.categories, name='categories'),
     path('content/<int:id>/<slug:slug>/', views.content_detail, name='content_detail'),
+    path('search/', views.content_search, name='content_search'),
 
 ]
 if settings.DEBUG:  # new

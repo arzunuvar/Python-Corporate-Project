@@ -1,0 +1,52 @@
+{% extends "homebase.html" %}
+{% block title %} Content Search Results {% endblock %}
+{% block keywords %} {{ categorydata.keywords }} {% endblock %}
+{% block description %} {{ categorydata.description }} {% endblock %}
+
+{% block head %}
+    <link rel="shortcut icon" href="{{ setting.icon.url }}">
+{% endblock %}
+
+{% block body %}
+
+    <!-- Start single page header -->
+    <section id="single-page-header">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="single-page-header-left">
+                            <h2>ARAMA</h2>
+                            <p>Arama Sayfasına Hoşgeldiniz..</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="single-page-header-right">
+                            <ol class="breadcrumb">
+                                <li><a href="/">Anasayfa</a></li>
+                                <li class="active">Arama</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End single page header -->
+
+    <!-- Portfolio container -->
+    <div id="mixit-container" class="portfolio-container">
+        {% for rs in contents %}
+
+            <tr>
+                <td><a href="/content/{{ rs.id }}/{{ rs.slug }}"> <img src="{{ rs.image.url }}" style="..." alt=""></a></td>
+                <td> <h4 class="content.name"><a href="/content/{{ rs.id }}/{{ rs.slug }}">{{ rs.title }}</a></h4></td>
+                <td><a href="/category/{{ rs.category.id }}/{{ rs.category.slug }}">{{ rs.category }}</a></td>
+            </tr>
+        {% endfor %}
+    </div>
+    </div>
+    </section>
+    <!-- End portfolio -->
+
+{% endblock %}
