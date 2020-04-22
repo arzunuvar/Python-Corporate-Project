@@ -1,7 +1,7 @@
 from django.utils.html import format_html
 from mptt.admin import MPTTModelAdmin, DraggableMPTTAdmin
 
-from content.models import Category, Content, Images
+from content.models import Category, Content, Images, Comment
 from django.contrib import admin
 
 
@@ -61,6 +61,12 @@ class CategoryAdmin2(DraggableMPTTAdmin):
     related_products_cumulative_count.short_description = 'Related products (in tree)'
 
 
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ['subject', 'comment', 'content', 'user', 'status']
+    list_filter = ['status']
+
+
 admin.site.register(Category, CategoryAdmin2)
 admin.site.register(Content, ContentAdmin)
 admin.site.register(Images, ImagesAdmin)
+admin.site.register(Comment, CommentAdmin)

@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f492e10-93bd-4168-9341-f6a435dd07e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/home/static/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/content/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/content/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/content/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/content/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/content_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
@@ -49,7 +54,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1aRWx8WFSdEJOqgJKfQwerG7sjE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -60,11 +67,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/static" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OzelKonular2\DjangoProje\home\static" />
       <recent name="C:\OzelKonular2\DjangoProje\home\templates" />
     </key>
   </component>
@@ -114,7 +122,10 @@
       <workItem from="1586864696562" duration="324000" />
       <workItem from="1586865582891" duration="745000" />
       <workItem from="1586889462753" duration="3019000" />
-      <workItem from="1586944704698" duration="2663000" />
+      <workItem from="1586944704698" duration="3203000" />
+      <workItem from="1587140192894" duration="9702000" />
+      <workItem from="1587552042489" duration="1355000" />
+      <workItem from="1587559600375" duration="2787000" />
     </task>
     <servers />
   </component>

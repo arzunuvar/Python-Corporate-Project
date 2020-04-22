@@ -5,6 +5,8 @@
 
 {% block head %}
     <link rel="shortcut icon" href="{{ setting.icon.url }}">
+    {% load static %}
+    <link href="{% static 'main.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
@@ -45,33 +47,318 @@
                                     <!-- Start blog news single -->
                                     <article class="blog-news-single">
                                         <div class="blog-news-img">
-                                            <a href="blog-single-with-right-sidebar.html"><img src="{{ content.image.url }}" alt="image"></a>
+                                            <a href="blog-single-with-right-sidebar.html"><img
+                                                    src="{{ content.image.url }}" alt="image"></a>
                                         </div>
                                         <div class="blog-news-title">
-                                            <h2><a href="blog-single-with-right-sidebar.html">{{ content.title }}y</a></h2>
-                                            <a class="blog-author" href="#">{{ content.slug }}</a> <span class="blog-date">{{ content.title }}</span>
+                                            <h2><a href="blog-single-with-right-sidebar.html">{{ content.title }}y</a>
+                                            </h2>
+                                            <a class="blog-author" href="#">{{ content.slug }}</a> <span
+                                                class="blog-date">{{ content.title }}</span>
                                         </div>
                                         <div class="blog-news-details">
                                             <p>{{ content.description }}</p>
-                                            <a class="blog-more-btn" href="blog-single-with-right-sidebar.html">Read More <i class="fa fa-long-arrow-right"></i></a>
+                                            <a class="blog-more-btn" href="blog-single-with-right-sidebar.html">Read
+                                                More <i class="fa fa-long-arrow-right"></i></a>
                                         </div>
                                     </article>
-                                    <!-- Start blog news single -->
-                                    <article class="blog-news-single">
-                                        {% for rs in images %}
-                                        <div class="blog-news-img">
-                                            <a href="blog-single-with-right-sidebar.html"><img src="{{ rs.image.url }}" alt="image"></a>
+
+
+                                    <div class="category-tab shop-details-tab"><!--category-tab-->
+                                        <div class="col-sm-12">
+                                            <ul class="nav nav-tabs">
+                                                <li><a href="#details" data-toggle="tab">Details</a></li>
+                                                <li><a href="#companyprofile" data-toggle="tab">Company Profile</a></li>
+                                                <li><a href="#tag" data-toggle="tab">Tag</a></li>
+                                                <li class="active"><a href="#reviews" data-toggle="tab">Reviews (5)</a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        {% endfor %}
-                                        <div class="blog-news-title">
-                                            <h2><a href="blog-single-with-right-sidebar.html">{{ content.title }}</a></h2>
-                                            <p>By <a class="blog-author" href="#">{{ content.slug }}</a> <span class="blog-date">{{ content.id }}</span></p>
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade" id="details">
+                                                <div class="col-sm-3">
+                                                    <div class="product-image-wrapper">
+                                                        <div class="single-products">
+                                                            <div class="productinfo text-center">
+                                                                <img src="images/home/gallery1.jpg" alt=""/>
+                                                                <h2>$56</h2>
+                                                                <p>Easy Polo Black Edition</p>
+                                                                <button type="button"
+                                                                        class="btn btn-default add-to-cart"><i
+                                                                        class="fa fa-shopping-cart"></i>Add to cart
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="product-image-wrapper">
+                                                        <div class="single-products">
+                                                            <div class="productinfo text-center">
+                                                                <img src="images/home/gallery2.jpg" alt=""/>
+                                                                <h2>$56</h2>
+                                                                <p>Easy Polo Black Edition</p>
+                                                                <button type="button"
+                                                                        class="btn btn-default add-to-cart"><i
+                                                                        class="fa fa-shopping-cart"></i>Add to cart
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="product-image-wrapper">
+                                                        <div class="single-products">
+                                                            <div class="productinfo text-center">
+                                                                <img src="images/home/gallery3.jpg" alt=""/>
+                                                                <h2>$56</h2>
+                                                                <p>Easy Polo Black Edition</p>
+                                                                <button type="button"
+                                                                        class="btn btn-default add-to-cart"><i
+                                                                        class="fa fa-shopping-cart"></i>Add to cart
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="product-image-wrapper">
+                                                        <div class="single-products">
+                                                            <div class="productinfo text-center">
+                                                                <img src="images/home/gallery4.jpg" alt=""/>
+                                                                <h2>$56</h2>
+                                                                <p>Easy Polo Black Edition</p>
+                                                                <button type="button"
+                                                                        class="btn btn-default add-to-cart"><i
+                                                                        class="fa fa-shopping-cart"></i>Add to cart
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="companyprofile">
+                                                <div class="col-sm-3">
+                                                    <div class="product-image-wrapper">
+                                                        <div class="single-products">
+                                                            <div class="productinfo text-center">
+                                                                <img src="images/home/gallery1.jpg" alt=""/>
+                                                                <h2>$56</h2>
+                                                                <p>Easy Polo Black Edition</p>
+                                                                <button type="button"
+                                                                        class="btn btn-default add-to-cart"><i
+                                                                        class="fa fa-shopping-cart"></i>Add to cart
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="product-image-wrapper">
+                                                        <div class="single-products">
+                                                            <div class="productinfo text-center">
+                                                                <img src="images/home/gallery3.jpg" alt=""/>
+                                                                <h2>$56</h2>
+                                                                <p>Easy Polo Black Edition</p>
+                                                                <button type="button"
+                                                                        class="btn btn-default add-to-cart"><i
+                                                                        class="fa fa-shopping-cart"></i>Add to cart
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="product-image-wrapper">
+                                                        <div class="single-products">
+                                                            <div class="productinfo text-center">
+                                                                <img src="images/home/gallery2.jpg" alt=""/>
+                                                                <h2>$56</h2>
+                                                                <p>Easy Polo Black Edition</p>
+                                                                <button type="button"
+                                                                        class="btn btn-default add-to-cart"><i
+                                                                        class="fa fa-shopping-cart"></i>Add to cart
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="product-image-wrapper">
+                                                        <div class="single-products">
+                                                            <div class="productinfo text-center">
+                                                                <img src="images/home/gallery4.jpg" alt=""/>
+                                                                <h2>$56</h2>
+                                                                <p>Easy Polo Black Edition</p>
+                                                                <button type="button"
+                                                                        class="btn btn-default add-to-cart"><i
+                                                                        class="fa fa-shopping-cart"></i>Add to cart
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="tag">
+                                                <div class="col-sm-3">
+                                                    <div class="product-image-wrapper">
+                                                        <div class="single-products">
+                                                            <div class="productinfo text-center">
+                                                                <img src="images/home/gallery1.jpg" alt=""/>
+                                                                <h2>$56</h2>
+                                                                <p>Easy Polo Black Edition</p>
+                                                                <button type="button"
+                                                                        class="btn btn-default add-to-cart"><i
+                                                                        class="fa fa-shopping-cart"></i>Add to cart
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="product-image-wrapper">
+                                                        <div class="single-products">
+                                                            <div class="productinfo text-center">
+                                                                <img src="images/home/gallery2.jpg" alt=""/>
+                                                                <h2>$56</h2>
+                                                                <p>Easy Polo Black Edition</p>
+                                                                <button type="button"
+                                                                        class="btn btn-default add-to-cart"><i
+                                                                        class="fa fa-shopping-cart"></i>Add to cart
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="product-image-wrapper">
+                                                        <div class="single-products">
+                                                            <div class="productinfo text-center">
+                                                                <img src="images/home/gallery3.jpg" alt=""/>
+                                                                <h2>$56</h2>
+                                                                <p>Easy Polo Black Edition</p>
+                                                                <button type="button"
+                                                                        class="btn btn-default add-to-cart"><i
+                                                                        class="fa fa-shopping-cart"></i>Add to cart
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="product-image-wrapper">
+                                                        <div class="single-products">
+                                                            <div class="productinfo text-center">
+                                                                <img src="images/home/gallery4.jpg" alt=""/>
+                                                                <h2>$56</h2>
+                                                                <p>Easy Polo Black Edition</p>
+                                                                <button type="button"
+                                                                        class="btn btn-default add-to-cart"><i
+                                                                        class="fa fa-shopping-cart"></i>Add to cart
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab-pane fade active in" id="reviews">
+
+                                                <div class="response-area">
+                                                    <h2>3 RESPONSES</h2>
+                                                    <ul class="media-list">
+                                                        {% for com in comments %}
+                                                        <li class="media">
+
+                                                            <a class="pull-left" href="#">
+                                                                <img class="media-object" src="{{ content.image.url }}"
+                                                                     alt="User image" style=" height: 100px;width: 100px">
+                                                            </a>
+                                                            <div class="media-body">
+                                                                <ul class="sinlge-post-meta">
+                                                                    <li><i class="fa fa-user"></i>{{ com.user.first_name }} {{ com.user.last_name }}</li>
+                                                                    <li><i class="fa fa-clock-o"></i> {{ com.create_at }}</li>
+                                                                    <li><i class="fa fa-calendar"></i> {{ com.create_at }}</li>
+                                                                </ul>
+                                                                <h5>Subject:{{ com.subject }}</h5>
+                                                                <p>{{ com.comment }}</p>
+                                                                <a class="btn" href=""><i
+                                                                        class="fa fa-reply"></i>Replay</a>
+                                                            </div>
+                                                        </li>
+                                                        {% endfor %}
+
+                                                    </ul>
+                                                </div><!--/Response-area-->
+
+
+                                                <div class="col-sm-12">
+                                                    <ul>
+                                                        <li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
+                                                        <li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
+                                                        <li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a>
+                                                        </li>
+                                                    </ul>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                                        eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut
+                                                        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                        nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in
+                                                        reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                                        nulla pariatur.</p>
+                                                    <p><b>Write Your Review</b></p>
+
+                                                    {% if messages %}
+                                                        {% for message in messages %}
+                                                            <div class="alert alert-{{ message.tags }}" role="alert">
+                                                                {{ message }}
+                                                            </div>
+                                                        {% endfor %}
+                                                    {% endif %}
+
+                                                    <form action="/content/addcomment/{{ content.id }}" method="post">
+                                                        {% csrf_token %}
+                                                        <span>
+											<input type="text" name="subject" placeholder="Subject"/>
+
+										</span>
+                                                        <textarea name="comment"
+                                                                  placeholder="Type your comment here"></textarea>
+
+                                                        <div class="form-group">
+                                                            <strong class="text-uppercase">
+                                                                Your Rating:
+                                                            </strong>
+                                                            <input id="star1" type="radio" name="rate" value="1"/><label
+                                                                for="star1"></label>
+                                                            <input id="star2" type="radio" name="rate" value="2"/><label
+                                                                for="star2"></label>
+                                                            <input id="star3" type="radio" name="rate" value="3"/><label
+                                                                for="star3"></label>
+                                                            <input id="star4" type="radio" name="rate" value="4"/><label
+                                                                for="star4"></label>
+                                                            <input id="star5" type="radio" name="rate" value="5"/><label
+                                                                for="star5"></label>
+
+                                                        </div>
+
+                                                        {% if user.id is not  None %}
+                                                            <button class="btn btn-default pull-right">
+                                                                Submit
+                                                            </button>
+
+                                                        {% else %}
+                                                            Yorum Eklemek için Üye olun!
+                                                        {% endif %}
+                                                    </form>
+                                                </div>
+                                            </div>
+
                                         </div>
-                                        <div class="blog-news-details">
-                                            <p>{{ content.description }}</p>
-                                            <a class="blog-more-btn" href="blog-single-with-right-sidebar.html">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </article>
+                                    </div><!--/category-tab-->
+
+
                                 </div>
                             </div>
                         </div>
