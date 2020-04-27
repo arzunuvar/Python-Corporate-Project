@@ -14,10 +14,28 @@
     <!-- header top search -->
     <div class="header-top">
         <div class="container">
+        {% load mptt_tags %}
             <form action="/search/" method="post">
                 {% csrf_token %}
+                <label>
+                    <select name="catid">
+                        <option value="0">All Categories</option>
+                        {% recursetree category %}
+                            {% if node.is_leaf_node %}
+                                <option value="{{ node.id }}">{{ node.title }}</option>
+                            {% endif %}
+                            {% if not node.is_leaf_node %}
+                                <optgroup label="{{ node.title }}">
+                                    {{ children }}
+                                </optgroup>
+                            {% endif %}
+                        {% endrecursetree %}
+                    </select>
+                </label>
+
                 <div id="search">
-                    <input type="text" placeholder="Type your search keyword here and hit Enter..." name="query" id="query" style="display: inline-block;">
+                    <input type="text" placeholder="Type your search keyword here..." name="query" id="query"
+                           style="display: inline-block;">
                     <button type="submit">
                         <i class="fa fa-search"></i>
                     </button>
@@ -49,7 +67,8 @@
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="header-login">
-                        <a class="login modal-form" data-target="#login-form" data-toggle="modal" href="#">Login / Sign Up</a>
+                        <a class="login modal-form" data-target="#login-form" data-toggle="modal" href="#">Login / Sign
+                            Up</a>
                     </div>
                 </div>
             </div>
@@ -58,21 +77,21 @@
 </header>
 <!-- End header -->
 
-    <script>
-        $(function() {
-            $("#query").autocomplete({
-                source: "/search_auto/",
-                select: function (event, ui) { //item selected
-                    AutoCompleteSelectHandler(event, ui)
-                },
-                minLength: 2,
-            });
+<script>
+    $(function () {
+        $("#query").autocomplete({
+            source: "/search_auto/",
+            select: function (event, ui) { //item selected
+                AutoCompleteSelectHandler(event, ui)
+            },
+            minLength: 2,
         });
-        function AutoCompleteSelectHandler(event, ui)
-        {
-            var selectedObj = ui.item;
-        }
-    </script>
+    });
+
+    function AutoCompleteSelectHandler(event, ui) {
+        var selectedObj = ui.item;
+    }
+</script>
 
 <!-- Start login modal window -->
 <div aria-hidden="false" role="dialog" tabindex="-1" id="login-form" class="modal leread-modal fade in">
@@ -80,7 +99,8 @@
         <!-- Start login section -->
         <div id="login-content" class="modal-content">
             <div class="modal-header">
-                <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+                <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span
+                        aria-hidden="true">×</span></button>
                 <h4 class="modal-title"><i class="fa fa-unlock-alt"></i>Login</h4>
             </div>
             <div class="modal-body">
@@ -105,7 +125,8 @@
         <!-- Start signup section -->
         <div id="signup-content" class="modal-content">
             <div class="modal-header">
-                <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+                <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span
+                        aria-hidden="true">×</span></button>
                 <h4 class="modal-title"><i class="fa fa-lock"></i>Sign Up</h4>
             </div>
             <div class="modal-body">

@@ -99,12 +99,11 @@ def content_search(request):
             catid = form.cleaned_data['catid']
             if catid == 0:
                 contents = Content.objects.filter(title__icontains=query)
-        else:
-            contents = Content.objects.filter(title__icontains=query,category_id=catid)
+            else:
+                contents = Content.objects.filter(title__icontains=query, category_id=catid)
 
-            context = {'contents': contents,
-                       'category': category,
-                       }
+            context = {'contents': contents, 'category': category}
+
             return render(request, 'content_search.html', context)
 
         return HttpResponseRedirect('/')
