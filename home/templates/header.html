@@ -17,7 +17,7 @@
             <form action="/search/" method="post">
                 {% csrf_token %}
                 <div id="search">
-                    <input type="text" placeholder="Type your search keyword here and hit Enter..." name="query" id="m_search" style="display: inline-block;">
+                    <input type="text" placeholder="Type your search keyword here and hit Enter..." name="query" id="query" style="display: inline-block;">
                     <button type="submit">
                         <i class="fa fa-search"></i>
                     </button>
@@ -57,6 +57,22 @@
     </div>
 </header>
 <!-- End header -->
+
+    <script>
+        $(function() {
+            $("#query").autocomplete({
+                source: "/search_auto/",
+                select: function (event, ui) { //item selected
+                    AutoCompleteSelectHandler(event, ui)
+                },
+                minLength: 2,
+            });
+        });
+        function AutoCompleteSelectHandler(event, ui)
+        {
+            var selectedObj = ui.item;
+        }
+    </script>
 
 <!-- Start login modal window -->
 <div aria-hidden="false" role="dialog" tabindex="-1" id="login-form" class="modal leread-modal fade in">

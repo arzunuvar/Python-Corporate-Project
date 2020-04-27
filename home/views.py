@@ -1,3 +1,5 @@
+import json
+
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib import messages
@@ -5,6 +7,7 @@ from django.contrib import messages
 from content.models import Content, Category, Images, Comment
 from home.models import Setting, ContactFormu, ContactFormMessage
 from home.forms import SearchForm
+
 
 def index(request):
     setting = Setting.objects.get(pk=1)
@@ -93,7 +96,11 @@ def content_search(request):
         if form.is_valid():
             category = Category.objects.all()
             query = form.cleaned_data['query']
-            contents = Content.objects.filter(title__icontains=query)
+            catid = form.cleaned_data['catid']
+            if catid == 0:
+                contents = Content.objects.filter(title__icontains=query)
+        else:
+            contents = Content.objects.filter(title__icontains=query,category_id=catid)
 
             context = {'contents': contents,
                        'category': category,
@@ -101,3 +108,19 @@ def content_search(request):
             return render(request, 'content_search.html', context)
 
         return HttpResponseRedirect('/')
+
+
+def content_search_auto(request):
+    if request.is_ajax():
+        q = request.GET.get('term', '')
+        content = Content.objects.filter(title__icontains=q)
+        results = []
+        for rs in content:
+            content_json = {}
+            content_json = rs.title
+            results.append(content_json)
+        data = json.dumps(results)
+    else:
+        data = 'fail'
+    mimetype = 'application/json'
+    return HttpResponse(data, mimetype)
