@@ -15,6 +15,7 @@ class ContentAdmin(admin.ModelAdmin):
     readonly_fields = ('image_tag',)
     list_filter = ['status', 'category']
     inlines = [ContentImageInline]
+    prepopulated_fields = {'slug': ('title',)}
 
 
 class ImagesAdmin(admin.ModelAdmin):
@@ -29,6 +30,7 @@ class CategoryAdmin2(DraggableMPTTAdmin):
     list_display_links = ('indented_title',)
     list_filter = ['status']
     readonly_fields = ('image_tag',)
+    prepopulated_fields = {'slug': ('title',)}
 
     def get_queryset(self, request):
         qs = super().get_queryset(request)
