@@ -14,7 +14,7 @@
     <!-- header top search -->
     <div class="header-top">
         <div class="container">
-        {% load mptt_tags %}
+            {% load mptt_tags %}
             <form action="/search/" method="post">
                 {% csrf_token %}
                 <label>
@@ -67,8 +67,8 @@
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="header-login">
-                        <a class="login modal-form" data-target="#login-form" data-toggle="modal" href="#">Login / Sign
-                            Up</a>
+                        <a class="login modal-form" data-target="#login-form" data-toggle="modal" href="#">
+                            {% if user.id is not  None %}{{ user.first_name }}{% else %}Login / Sign Up{% endif %}</a>
                     </div>
                 </div>
             </div>
@@ -93,66 +93,96 @@
     }
 </script>
 
-<!-- Start login modal window -->
-<div aria-hidden="false" role="dialog" tabindex="-1" id="login-form" class="modal leread-modal fade in">
-    <div class="modal-dialog">
-        <!-- Start login section -->
-        <div id="login-content" class="modal-content">
-            <div class="modal-header">
-                <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span
-                        aria-hidden="true">×</span></button>
-                <h4 class="modal-title"><i class="fa fa-unlock-alt"></i>Login</h4>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <input type="text" placeholder="User name" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="Password" class="form-control">
-                    </div>
-                    <div class="loginbox">
-                        <label><input type="checkbox"><span>Remember me</span></label>
-                        <button class="btn signin-btn" type="button">SIGN IN</button>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer footer-box">
-                <a href="#">Forgot password ?</a>
-                <span>No account ? <a id="signup-btn" href="#">Sign Up.</a></span>
-            </div>
-        </div>
-        <!-- Start signup section -->
-        <div id="signup-content" class="modal-content">
-            <div class="modal-header">
-                <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span
-                        aria-hidden="true">×</span></button>
-                <h4 class="modal-title"><i class="fa fa-lock"></i>Sign Up</h4>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <input placeholder="Name" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input placeholder="Username" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input placeholder="Email" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="Password" class="form-control">
-                    </div>
-                    <div class="signupbox">
-                        <span>Already got account? <a id="login-btn" href="#">Sign In.</a></span>
-                    </div>
-                    <div class="loginbox">
-                        <label><input type="checkbox"><span>Remember me</span><i class="fa"></i></label>
-                        <button class="btn signin-btn" type="button">SIGN UP</button>
-                    </div>
-                </form>
+
+{% if user.id is not  None %}
+    <div aria-hidden="false" role="dialog" tabindex="-1" id="login-form" class="modal leread-modal fade in">
+        <div class="modal-dialog">
+            <!-- Start login section -->
+            <div id="login-content" class="modal-content">
+                <div class="modal-header">
+                    <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span
+                            aria-hidden="true">×</span></button>
+                    <h4 class="modal-title"><i class="fa fa-unlock-alt"></i>Login</h4>
+                </div>
+                <div class="modal-body">
+                    <p>User işlemeleri</p>
+                    <a href="logout/">Log Out</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- End login modal window -->
+{% else %}
+    <div aria-hidden="false" role="dialog" tabindex="-1" id="login-form" class="modal leread-modal fade in">
+        <div class="modal-dialog">
+            <!-- Start login section -->
+            <div id="login-content" class="modal-content">
+                <div class="modal-header">
+                    <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span
+                            aria-hidden="true">×</span></button>
+                    <h4 class="modal-title"><i class="fa fa-unlock-alt"></i>Login</h4>
+                </div>
+                <div class="modal-body">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}" role="alert">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    <form action="login/" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input name="username" type="text" placeholder="User name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" placeholder="Password" class="form-control">
+                        </div>
+                        <div class="loginbox">
+                            <label><input type="checkbox"><span>Remember me</span></label>
+                            <input type="submit" class="btn signin-btn" value="SIGN IN">
+                            
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer footer-box">
+                    <a href="#">Forgot password ?</a>
+                    <span>No account ? <a id="signup-btn" href="#">Sign Up.</a></span>
+                </div>
+            </div>
+            <!-- Start signup section -->
+            <div id="signup-content" class="modal-content">
+                <div class="modal-header">
+                    <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span
+                            aria-hidden="true">×</span></button>
+                    <h4 class="modal-title"><i class="fa fa-lock"></i>Sign Up</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <input placeholder="Name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input placeholder="Username" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input placeholder="Email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Password" class="form-control">
+                        </div>
+                        <div class="signupbox">
+                            <span>Already got account? <a id="login-btn" href="#">Sign In.</a></span>
+                        </div>
+                        <div class="loginbox">
+                            <label><input type="checkbox"><span>Remember me</span><i class="fa"></i></label>
+                            <button class="btn signin-btn" type="button">SIGN UP</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End login modal window -->
+
+{% endif %}
+
