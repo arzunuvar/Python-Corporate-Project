@@ -7,7 +7,7 @@ from django.contrib import messages
 # Create your views here.
 from content.models import Content, Category, Images, Comment
 from home.models import Setting, ContactFormu, ContactFormMessage
-from home.forms import SearchForm
+from home.forms import SearchForm, SignUpForm
 
 
 def index(request):
@@ -17,6 +17,7 @@ def index(request):
     latestcontents = Content.objects.all()[:4]
     newscontents = Content.objects.all().order_by('-id')[:4]
     randomcontents = Content.objects.all().order_by('?')[:4]
+    form = SignUpForm()
 
     context = {'setting': setting,
                'page': 'home',
@@ -143,8 +144,24 @@ def login_view(request):
         else:
             messages.warning(request, "Login Hatası ! Kullanıcı adı veya şifre yanlış ")
             return HttpResponseRedirect('/login')
-    return HttpResponseRedirect('/')
-    #category = Category.objects.all()
-    #context = {'category': category}
 
-    #return render(request, 'login.html', context)
+    category = Category.objects.all()
+    context = {'category': category}
+
+    return render(request, 'login.html', context)
+
+
+def signup_view(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = request.POST['username']
+            password = request.POST['password1']
+            user = authenticate(request, username=username, password=password)
+            login(request, user)
+            return HttpResponseRedirect('/')
+    form = SignUpForm()
+    category = Category.objects.all()
+    context = {'category': category, 'form': form}
+    return render(request, 'signup.html', context)
