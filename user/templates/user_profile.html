@@ -1,0 +1,99 @@
+{% extends "homebase.html" %}
+
+{% block title %} {{ profile.user_name }} Profile {{ setting.company }} {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+
+{% block head %}
+    <link rel="shortcut icon" href="{{ setting.icon.url }}">
+{% endblock %}
+
+
+{% block body %}
+
+    <!-- Start single page header -->
+    <section id="single-page-header">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="single-page-header-left">
+                            <h2>USER PROFİLE</h2>
+                            <p>User Profile Sayfasına Hoşgeldiniz..</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="single-page-header-right">
+                            <ol class="breadcrumb">
+                                <li><a href="/">Anasayfa</a></li>
+                                <li class="active">User Profile</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End single page header -->
+
+    <!-- Start contact section  -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                </div>
+                <div class="col-md-12">
+                    <div class="cotact-area">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="contact-area-left">
+                                    {% include "user_panel.html" %}
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="contact-area-right">
+                                    <h4 class="widget-title">USER INFORMATION</h4>
+                                    <table class="shopping-cart-table table">
+                                        <tr>
+                                            <th class="image"></th>
+                                            <th><img src="{{ profile.image.url }}"></th>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-left">Name Surname</th>
+                                            <th class="text-left">{{ profile.user_name }}</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-left">Email</th>
+                                            <th class="text-left">{{ profile.user.email }}</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-left">Phone</th>
+                                            <th class="text-left">{{ profile.phone}}</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-left">Address</th>
+                                            <th class="text-left">{{ profile.address }}</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-left">City</th>
+                                            <th class="text-left">{{ profile.city }}</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-left">Country</th>
+                                            <th class="text-left">{{ profile.country }}</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End contact section  -->
+
+{% endblock %}
+
+
+
