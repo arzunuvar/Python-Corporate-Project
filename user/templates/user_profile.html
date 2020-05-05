@@ -55,32 +55,37 @@
                                     <h4 class="widget-title">USER INFORMATION</h4>
                                     <table class="shopping-cart-table table">
                                         <tr>
-                                            <th class="image"></th>
-                                            <th><img src="{{ profile.image.url }}"></th>
+                                            <th class="text-left">
+                                                <div class="tag-cloud">
+                                                <a href="/user/update" >Update Profile</a>
+                                                <a href="/user/password" >Change Password</a>
+                                                </div>
+                                            </th>
+                                            <td><img src="{{ profile.image.url }}" style="border-radius: 45px; height: 200px"></td>
                                         </tr>
                                         <tr>
                                             <th class="text-left">Name Surname</th>
-                                            <th class="text-left">{{ profile.user_name }}</th>
+                                            <td class="text-left">{{ profile.user_name }}</td>
                                         </tr>
                                         <tr>
                                             <th class="text-left">Email</th>
-                                            <th class="text-left">{{ profile.user.email }}</th>
+                                            <td class="text-left">{{ profile.user.email }}</td>
                                         </tr>
                                         <tr>
                                             <th class="text-left">Phone</th>
-                                            <th class="text-left">{{ profile.phone}}</th>
+                                            <td class="text-left">{{ profile.phone}}</td>
                                         </tr>
                                         <tr>
                                             <th class="text-left">Address</th>
-                                            <th class="text-left">{{ profile.address }}</th>
+                                            <td class="text-left">{{ profile.address }}</td>
                                         </tr>
                                         <tr>
                                             <th class="text-left">City</th>
-                                            <th class="text-left">{{ profile.city }}</th>
+                                            <td class="text-left">{{ profile.city }}</td>
                                         </tr>
                                         <tr>
                                             <th class="text-left">Country</th>
-                                            <th class="text-left">{{ profile.country }}</th>
+                                            <td class="text-left">{{ profile.country }}</td>
                                         </tr>
                                     </table>
                                 </div>

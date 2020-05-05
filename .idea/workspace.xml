@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f492e10-93bd-4168-9341-f6a435dd07e5" name="Default Changelist" comment="Ajax JQuery ile İçerik Aramada Otomatik tamamlama yapıldı.">
-      <change afterPath="$PROJECT_DIR$/user/templates/user_panel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/user_profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/change_password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user_update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pythonProje/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProje/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pythonProje/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProje/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_panel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +54,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -188,7 +189,10 @@
       <workItem from="1588513399211" duration="596000" />
       <workItem from="1588535503487" duration="6325000" />
       <workItem from="1588596015458" duration="8388000" />
-      <workItem from="1588607211471" duration="2316000" />
+      <workItem from="1588607211471" duration="2538000" />
+      <workItem from="1588628291012" duration="10436000" />
+      <workItem from="1588641056502" duration="80000" />
+      <workItem from="1588704014990" duration="1851000" />
     </task>
     <task id="LOCAL-00001" summary="slider kısmı tekrardan düzenlendi.">
       <created>1588016327856</created>
