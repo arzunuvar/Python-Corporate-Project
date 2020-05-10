@@ -19,8 +19,9 @@ class UserUpdateForm(UserChangeForm):
 
 CITY = [
     ('Istanbul', 'Istanbul'),
-    ('Ankara', 'Ankara'),
     ('Izmir', 'Izmir'),
+    ('Konya', 'Konya'),
+    ('Ankara', 'Ankara'),
 ]
 
 
@@ -35,3 +36,4 @@ class ProfileUpdateForm(forms.ModelForm):
             'country': TextInput(attrs={'class': 'input', 'placeholder': 'country'}),
             'image': FileInput(attrs={'class': 'input', 'placeholder': 'image', }),
         }
+

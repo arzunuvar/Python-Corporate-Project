@@ -1,0 +1,97 @@
+{% extends "homebase.html" %}
+
+{% block title %} Comments {{ setting.company }} {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+
+{% block head %}
+    <link rel="shortcut icon" href="{{ setting.icon.url }}">
+{% endblock %}
+
+
+{% block body %}
+
+    <!-- Start single page header -->
+    <section id="single-page-header">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="single-page-header-left">
+                            <h2>USER COMMENTS</h2>
+                            <p>User Comments Sayfasına Hoşgeldiniz..</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="single-page-header-right">
+                            <ol class="breadcrumb">
+                                <li><a href="/">Anasayfa</a></li>
+                                <li class="active">User Comments</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End single page header -->
+
+    <!-- Start contact section  -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                </div>
+                <div class="col-md-12">
+                    <div class="cotact-area">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="contact-area-left">
+                                    {% include "user_panel.html" %}
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="contact-area-right">
+                                    <h4 class="widget-title">USER COMMENT LİST</h4>
+                                    <table class="shopping-cart-table table">
+                                        <tr>
+                                            <th class="text-left">Content</th>
+                                            <th class="text-left">Rate</th>
+                                            <th class="text-left">Subject</th>
+                                            <th class="text-left">Comment</th>
+                                            <th class="text-left">Status</th>
+                                            <th class="text-left">Date</th>
+                                            <th class="text-left">Detail</th>
+                                        </tr>
+                                        {% for rs in comments %}
+                                            <tr>
+                                                <td class="text-left">
+                                                    <a href="/content/{{ rs.content_id }}/{{ rs.content_slug }}">
+                                                        <strong>{{ rs.content.title }}</strong>
+                                                    </a>
+                                                </td>
+                                                <td class="text-left">{{ rs.rate }}</td>
+                                                <td class="text-left">{{ rs.subject }}</td>
+                                                <td class="text-left">{{ rs.comment }}</td>
+                                                <td class="text-left">{{ rs.status }}</td>
+                                                <td class="text-left">{{ rs.create_at }}</td>
+                                                <td class="text-left">
+                                                    <a class="comment-btn" href="/user/deletecomment/{{ rs.id }}" onclick="return confirm('Will be Delete ! Are you sure?')">Delete</a>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End contact section  -->
+
+{% endblock %}
+
+
+
