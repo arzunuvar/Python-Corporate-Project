@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f492e10-93bd-4168-9341-f6a435dd07e5" name="Default Changelist" comment="Ajax JQuery ile İçerik Aramada Otomatik tamamlama yapıldı.">
-      <change afterPath="$PROJECT_DIR$/user/templates/user_comments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/categories.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/change_password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_panel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +84,7 @@
       <recent name="C:\OzelKonular2\DjangoProje\home\static" />
     </key>
   </component>
-  <component name="RunManager" selected="Django tests.Test: user.templates">
+  <component name="RunManager" selected="Django server.DjangoProje">
     <configuration name="Test: user.templates" type="DjangoTestsConfigurationType" temporary="true">
       <module name="DjangoProje" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -116,6 +111,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="pythonProje.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -199,7 +195,8 @@
       <workItem from="1588887637226" duration="3049000" />
       <workItem from="1588890793722" duration="2981000" />
       <workItem from="1588951544557" duration="1217000" />
-      <workItem from="1589116917486" duration="1725000" />
+      <workItem from="1589116917486" duration="8465000" />
+      <workItem from="1589126509178" duration="741000" />
     </task>
     <task id="LOCAL-00001" summary="slider kısmı tekrardan düzenlendi.">
       <created>1588016327856</created>
@@ -227,18 +224,54 @@
     <option name="LAST_COMMIT_MESSAGE" value="Ajax JQuery ile İçerik Aramada Otomatik tamamlama yapıldı." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="26" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586716931281">
+    <state x="275" y="26" key="#SQL_Dialects" timestamp="1589123239744">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="26" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1586716931281" />
+    <state x="275" y="26" key="#SQL_Dialects/0.0.1366.738@0.0.1366.738" timestamp="1589123239744" />
+    <state x="275" y="26" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589120325577">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="26" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1589120325577" />
     <state x="308" y="0" width="780" height="737" key="CommitChangelistDialog2" timestamp="1588020973005">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="308" y="0" width="780" height="737" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1588020973005" />
-    <state x="463" y="122" key="FileChooserDialogImpl" timestamp="1586716877682">
+    <state x="463" y="122" key="FileChooserDialogImpl" timestamp="1589120312532">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="463" y="122" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1586716877682" />
+    <state x="463" y="122" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1589120312532" />
+    <state width="1322" height="176" key="GridCell.Tab.0.bottom" timestamp="1589123370503">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1322" height="176" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1589123370503" />
+    <state width="1322" height="176" key="GridCell.Tab.0.center" timestamp="1589123370503">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1322" height="176" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1589123370503" />
+    <state width="1322" height="176" key="GridCell.Tab.0.left" timestamp="1589123370503">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1322" height="176" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1589123370503" />
+    <state width="1322" height="176" key="GridCell.Tab.0.right" timestamp="1589123370503">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1322" height="176" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1589123370503" />
+    <state width="1322" height="364" key="GridCell.Tab.1.bottom" timestamp="1589121489950">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1322" height="364" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1589121489950" />
+    <state width="1322" height="364" key="GridCell.Tab.1.center" timestamp="1589121489950">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1322" height="364" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1589121489950" />
+    <state width="1322" height="364" key="GridCell.Tab.1.left" timestamp="1589121489949">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1322" height="364" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1589121489949" />
+    <state width="1322" height="364" key="GridCell.Tab.1.right" timestamp="1589121489950">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1322" height="364" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1589121489950" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1586699250392">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -255,5 +288,8 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1588887984125" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DjangoProje$Test__user_templates.coverage" NAME="Test: user.templates Coverage Results" MODIFIED="1589121338816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

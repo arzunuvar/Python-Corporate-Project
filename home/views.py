@@ -12,20 +12,29 @@ from home.forms import SearchForm, SignUpForm
 
 def index(request):
     setting = Setting.objects.get(pk=1)
-    sliderdata = Content.objects.all()[:4]
+    sliderdata = Content.objects.all()[:3]
     category = Category.objects.all()
-    latestcontents = Content.objects.all()[:4]
-    newscontents = Content.objects.all().order_by('-id')[:4]
-    randomcontents = Content.objects.all().order_by('?')[:4]
-    form = SignUpForm()
+
+    latestnews = Content.objects.raw(
+        'SELECT content_content.* FROM content_content LEFT JOIN content_category ON content_content.category_id = content_category.id WHERE content_category.tree_id = 3')[-3:]
+    latestevents = Content.objects.raw(
+        'SELECT content_content.* FROM content_content LEFT JOIN content_category ON content_content.category_id = content_category.id WHERE content_category.tree_id = 2')[-3:]
+    latestannouns = Content.objects.raw(
+        'SELECT content_content.* FROM content_content LEFT JOIN content_category ON content_content.category_id = content_category.id WHERE content_category.tree_id = 1')[-3:]
+
+
+    # latestnews = Content.objects.filter(category_id=5).reverse()[:4]
+    #newscontents = Content.objects.all().order_by('-id')[:4]
+    #randomcontents = Content.objects.all().order_by('?')[:4]
+    #form = SignUpForm()
 
     context = {'setting': setting,
                'page': 'home',
                'category': category,
                'sliderdata': sliderdata,
-               'latestcontents': latestcontents,
-               'newscontents': newscontents,
-               'randomcontents': randomcontents
+               'latestnews': latestnews,
+               'latestevents': latestevents,
+               'latestannouns': latestannouns
                }
     return render(request, 'index.html', context)
 
