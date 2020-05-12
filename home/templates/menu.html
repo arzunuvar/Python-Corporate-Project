@@ -22,32 +22,31 @@
                 <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
                     <li class="active"><a href="/">ANASAYFA</a></li>
                     <li><a href="/hakkimizda">HAKKIMIZDA</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">MENÜLER<span
-                                class="fa fa-angle-down"></span></a>
-                        <ul class="dropdown-menu" role="menu">
 
-                            {% load mptt_tags %}
+                    {% load mptt_tags %}
 
-                            {% recursetree category %}
-                                <li {% if not node.is_leaf_node %} class="dropdown" {% endif %}>
-                                    <a href="/category/{{ node.id }}/{{ node.slug }}" >{{ node.title }}<span
-                                            {% if not node.is_leaf_node %}  class="fa fa-angle-down" {% endif %} ></span></a>
+                    {% recursetree category %}
 
-                                    {% if not node.is_leaf_node %}
-                                        <ul class="dropdown-menu">
+                        {% if not node.is_leaf_node %}
 
-                                            <li><a href="/category/{{ node.id }}/{{ node.slug }}">{{ children }}</a></li>
+                            <li class="dropdown">
+                            <a href="/category/{{ node.id }}/{{ node.slug }}" class="dropdown-toggle" data-toggle="dropdown">{{ node.title }}<span
+                                    class="fa fa-angle-down"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                {{ children }}
+                            </ul>
+                            </li>
+                        {% endif %}
 
-                                        </ul>
-                                    {% endif %}
-                                </li>
-                            {% endrecursetree %}
-                        </ul>
-                    </li>
+                        {% if  node.is_leaf_node %}
+                            <li><a href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a></li>
+                        {% endif %}
+
+
+                    {% endrecursetree %}
                     <li><a href="/referanslar">REFERANSLAR</a></li>
                     <li><a href="/iletisim">İLETİŞİM</a></li>
-                </ul>
+                    </ul>
             </div><!--/.nav-collapse -->
             <a href="#" id="search-icon">
                 <i class="fa fa-search">

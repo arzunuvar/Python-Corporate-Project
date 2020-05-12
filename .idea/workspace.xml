@@ -2,12 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f492e10-93bd-4168-9341-f6a435dd07e5" name="Default Changelist" comment="Ajax JQuery ile İçerik Aramada Otomatik tamamlama yapıldı.">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/error_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menucontent/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/454303_m7yTgre.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Egitim_gorselleri__Yazkampı_2019-2ec670cd-1415-4ef7-90f9-00e2bac84066.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/about-photo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/company_N3LW1hy_lfWJZz6_UtsyR0H.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_1_7VR5pec.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_1_Bxw7Aul_eGHKMAO.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_1_vCblers_hyTPI8d_YAavsFZ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_2_LdqRlxZ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_2_iYr2YUr.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_4_IdVwAjc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_dcXB1hU.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_u8h2Yyr_oyAQGvq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_u8h2Yyr_oyAQGvq_cqTOzO2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_vAZAS90_IiuTIy4_sBCbhbo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_zbdtA7v_zdVDe65.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_zbdtA7v_zdVDe65_E6dH81r.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_zbdtA7v_zdVDe65_E6dH81r_Ai9nwh1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_1_O7oY2x8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_1_jdNNNUB_Tz1PWat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_2_zQTuZOw.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_3_oP8et2l.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_3_z0ou5vd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_3xKDMYJ_xpgrSs0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_4_KNHL4XI.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_4_LBJUpxQ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_4_ZbBs3KW_F0dvJUr.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_4_oXEhsll_AQwZDm6_oTT3RkZ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_5_6bov65B.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_5_lihfHbZ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_5_lihfHbZ_idHYxip.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_7_NJV9BBb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_7_NJV9BBb_gWVovzD.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_8_AaXEtXr.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_DcXoYdz_WaeLBqS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_Vb1LWnE.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_bHiiiFJ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_kb4wdoz_8kAiOXk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/kamuoyu-duyuru-400x330_JD67qsW.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/liderlik-motivasyon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/ofistespor1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/pic2_5PpxtKU_wH4GRZH_zLzExvB.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/content_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pythonProje/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProje/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pythonProje/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProje/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,19 +113,21 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/user/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/templates" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OzelKonular2\DjangoProje\home\templates" />
+      <recent name="C:\OzelKonular2\DjangoProje\menucontent" />
       <recent name="C:\OzelKonular2\DjangoProje\user\templates" />
       <recent name="C:\OzelKonular2\DjangoProje\user" />
-      <recent name="C:\OzelKonular2\DjangoProje\home\templates" />
       <recent name="C:\OzelKonular2\DjangoProje\home\static" />
     </key>
   </component>
@@ -196,7 +243,11 @@
       <workItem from="1588890793722" duration="2981000" />
       <workItem from="1588951544557" duration="1217000" />
       <workItem from="1589116917486" duration="8465000" />
-      <workItem from="1589126509178" duration="741000" />
+      <workItem from="1589126509178" duration="852000" />
+      <workItem from="1589136214178" duration="4670000" />
+      <workItem from="1589140966001" duration="8921000" />
+      <workItem from="1589209275595" duration="3017000" />
+      <workItem from="1589226225494" duration="7410000" />
     </task>
     <task id="LOCAL-00001" summary="slider kısmı tekrardan düzenlendi.">
       <created>1588016327856</created>
@@ -219,6 +270,7 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="slider kısmı tekrardan düzenlendi." />
     <MESSAGE value="Ajax JQuery ile İçerik Aramada Otomatik tamamlama yapıldı." />
     <option name="LAST_COMMIT_MESSAGE" value="Ajax JQuery ile İçerik Aramada Otomatik tamamlama yapıldı." />

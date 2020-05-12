@@ -16,17 +16,19 @@ def index(request):
     category = Category.objects.all()
 
     latestnews = Content.objects.raw(
-        'SELECT content_content.* FROM content_content LEFT JOIN content_category ON content_content.category_id = content_category.id WHERE content_category.tree_id = 3')[-3:]
+        'SELECT content_content.* FROM content_content LEFT JOIN content_category ON content_content.category_id = content_category.id WHERE content_category.tree_id = 3')[
+                 -3:]
     latestevents = Content.objects.raw(
-        'SELECT content_content.* FROM content_content LEFT JOIN content_category ON content_content.category_id = content_category.id WHERE content_category.tree_id = 2')[-3:]
+        'SELECT content_content.* FROM content_content LEFT JOIN content_category ON content_content.category_id = content_category.id WHERE content_category.tree_id = 2')[
+                   -3:]
     latestannouns = Content.objects.raw(
-        'SELECT content_content.* FROM content_content LEFT JOIN content_category ON content_content.category_id = content_category.id WHERE content_category.tree_id = 1')[-3:]
-
+        'SELECT content_content.* FROM content_content LEFT JOIN content_category ON content_content.category_id = content_category.id WHERE content_category.tree_id = 1')[
+                    -3:]
 
     # latestnews = Content.objects.filter(category_id=5).reverse()[:4]
-    #newscontents = Content.objects.all().order_by('-id')[:4]
-    #randomcontents = Content.objects.all().order_by('?')[:4]
-    #form = SignUpForm()
+    # newscontents = Content.objects.all().order_by('-id')[:4]
+    # randomcontents = Content.objects.all().order_by('?')[:4]
+    # form = SignUpForm()
 
     context = {'setting': setting,
                'page': 'home',
@@ -76,10 +78,12 @@ def iletisim(request):
 
 def categories(request, id, slug):
     # setting = Setting.objects.get(pk=1)
-    category = Category.objects.all()
-    categorydata = Category.objects.get(pk=id)
-    contents = Content.objects.filter(category_id=id)
-
+    try:
+        category = Category.objects.all()
+        categorydata = Category.objects.get(pk=id)
+        contents = Content.objects.filter(category_id=id)
+    except:
+        return HttpResponseRedirect("/error")
     context = {'categories': categories,
                'category': category,
                'contents': contents,
@@ -91,14 +95,19 @@ def categories(request, id, slug):
 def content_detail(request, id, slug):
     # setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
-    content = Content.objects.get(pk=id)
-    images = Images.objects.filter(content_id=id)
-    comments = Comment.objects.filter(content_id=id, status='True')
+    try:
+        content = Content.objects.get(pk=id)
+        images = Images.objects.filter(content_id=id)
+        comments = Comment.objects.filter(content_id=id, status='True')
 
-    context = {
-        'content': content, 'slug': slug, 'category': category, 'images': images, 'comments': comments,
-    }
-    return render(request, 'content_detail.html', context)
+        context = {
+            'content': content, 'slug': slug, 'category': category, 'images': images, 'comments': comments,
+        }
+        return render(request, 'content_detail.html', context)
+    except:
+        messages.warning(request, "Hata ! İlgili içerik bulunamadı ")
+    link = '/error'
+    return HttpResponseRedirect(link)
 
 
 def content_search(request):
@@ -174,3 +183,13 @@ def signup_view(request):
     category = Category.objects.all()
     context = {'category': category, 'form': form}
     return render(request, 'signup.html', context)
+
+
+def error(request):
+    category = Category.objects.all()
+
+    setting = Setting.objects.get(pk=1)
+    context = {
+         'setting': setting, 'category': category,
+    }
+    return render(request, 'error_page.html', context)
