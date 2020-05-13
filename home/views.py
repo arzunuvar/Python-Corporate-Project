@@ -6,7 +6,7 @@ from django.shortcuts import render
 from django.contrib import messages
 # Create your views here.
 from content.models import Content, Category, Images, Comment
-from home.models import Setting, ContactFormu, ContactFormMessage
+from home.models import Setting, ContactFormu, ContactFormMessage, FAQ
 from home.forms import SearchForm, SignUpForm
 
 
@@ -187,9 +187,18 @@ def signup_view(request):
 
 def error(request):
     category = Category.objects.all()
-
     setting = Setting.objects.get(pk=1)
     context = {
-         'setting': setting, 'category': category,
+        'setting': setting, 'category': category,
     }
     return render(request, 'error_page.html', context)
+
+
+def faq(request):
+    category = Category.objects.all()
+    setting = Setting.objects.get(pk=1)
+    faq = FAQ.objects.all().order_by('ordernumber')
+    context = {
+        'setting': setting, 'category': category, 'faq': faq,
+    }
+    return render(request, 'faq.html', context)
