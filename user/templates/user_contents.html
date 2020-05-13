@@ -1,6 +1,6 @@
 {% extends "homebase.html" %}
 
-{% block title %} Comments {{ setting.company }} {% endblock %}
+{% block title %} Contents {{ setting.company }} {% endblock %}
 {% block keywords %} {{ setting.keywords }} {% endblock %}
 {% block description %} {{ setting.description }} {% endblock %}
 
@@ -18,15 +18,15 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="single-page-header-left">
-                            <h2>USER COMMENTS</h2>
-                            <p>User Comments Sayfasına Hoşgeldiniz..</p>
+                            <h2>USER CONTENTS</h2>
+                            <p>User Contents Sayfasına Hoşgeldiniz..</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="single-page-header-right">
                             <ol class="breadcrumb">
                                 <li><a href="/">Anasayfa</a></li>
-                                <li class="active">User Comments</li>
+                                <li class="active">User Contents</li>
                             </ol>
                         </div>
                     </div>
@@ -52,34 +52,38 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="contact-area-right">
-                                    <h4 class="widget-title">USER COMMENTS LİST</h4>
-                                </div>
-
-                                <div class="content-section">
+                                    <h4 class="widget-title">USER CONTENTS LİST <a class="comment-btn" href="/user/addcontent">Add Content</a> </h4>
                                     <table class="shopping-cart-table table">
                                         <tr>
-                                            <th class="text-left">Content</th>
-                                            <th class="text-left">Rate</th>
-                                            <th class="text-left">Subject</th>
-                                            <th class="text-left">Comment</th>
+                                            <th class="text-left">Image</th>
+                                            <th class="text-left">Title</th>
 
+                                            <th class="text-left">Category</th>
+                                            <th class="text-left">Status</th>
                                             <th class="text-left">Date</th>
                                             <th class="text-left">Detail</th>
                                         </tr>
-                                        {% for rs in comments %}
+                                        {% for rs in contents %}
                                             <tr>
                                                 <td class="text-left">
-                                                    <a href="/content/{{ rs.content_id }}/{{ rs.content_slug }}">
-                                                        <strong>{{ rs.content.title }}</strong>
+                                                    <a href="/content/{{ rs.id }}/{{ rs.slug }}">
+                                                        <img src="{{ rs.image.url }}" style="height: 30px;">
                                                     </a>
                                                 </td>
-                                                <td class="text-left">{{ rs.rate }}</td>
-                                                <td class="text-left">{{ rs.subject }}</td>
-                                                <td class="text-left">{{ rs.comment }}</td>
+                                                <td class="text-left">
+                                                    <a href="/content/{{ rs.id }}/{{ rs.slug }}">
+                                                        {{ rs.title }}
+                                                    </a>
+                                                </td>
 
+                                                <td class="text-left">{{ rs.category.title }}</td>
+                                                <td class="text-left">{{ rs.status }}</td>
                                                 <td class="text-left">{{ rs.create_at }}</td>
                                                 <td class="text-left">
-                                                    <a class="comment-btn" href="/user/deletecomment/{{ rs.id }}" onclick="return confirm('Will be Delete ! Are you sure?')">Delete</a>
+                                                    <a class="comment-btn" href="/user/contentedit/{{ rs.id }}">Edit</a>
+                                                </td>
+                                                <td class="text-left">
+                                                    <a onclick="return confirm('Will be Delete ! Are you sure?')" class="comment-btn" href="/user/contentdelete/{{ rs.id }}">Delete</a>
                                                 </td>
                                             </tr>
                                         {% endfor %}

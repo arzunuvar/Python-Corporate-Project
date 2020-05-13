@@ -1,11 +1,15 @@
+from ckeditor.widgets import CKEditorWidget
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 
 # Create your models here.
+from django.forms import ModelForm, TextInput, Select, FileInput
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 from mptt.fields import TreeForeignKey
 from mptt.models import MPTTModel
+
+from content.models import Category, Content
 
 
 class Menu(MPTTModel):
@@ -66,6 +70,23 @@ class Menucontent(models.Model):
 
     def get_absolute_url(self):
         return reverse('menucontent_detail', kwargs={'slug': self.slug})
+
+
+class ContentForm(ModelForm):
+    class Meta:
+        model = Content
+        fields = ['category', 'title', 'slug', 'keywords', 'description', 'image', 'detail']
+        widgets = {
+            'title': TextInput(attrs={'class': 'input', 'placeholder': 'title'}),
+            'keywords': TextInput(attrs={'class': 'input', 'placeholder': 'keywords'}),
+            'description': TextInput(attrs={'class': 'input', 'placeholder': 'description'}),
+            'category': Select(attrs={'class': 'input', 'placeholder': 'type'}, choices=(
+                Category.objects.all()
+            )),
+            'image': FileInput(attrs={'class': 'input', 'placeholder': 'image'}),
+            'slug': TextInput(attrs={'class': 'input', 'placeholder': 'slug'}),
+            'detail': CKEditorWidget(),
+        }
 
 
 class MImages(models.Model):

@@ -1,8 +1,10 @@
+
 from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
 from django.forms import ModelForm
+
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 from ckeditor_uploader.fields import RichTextUploadingField
@@ -50,6 +52,7 @@ class Content(models.Model):
         ('True', 'Evet'),
         ('False', 'Hayır'),
     )
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)  # relation with Category table
     title = models.CharField(max_length=150)
     keywords = models.CharField(blank=True, max_length=255)
@@ -111,3 +114,5 @@ class CommentForm(ModelForm):
     class Meta:
         model = Comment
         fields = ['subject', 'comment', 'rate']
+
+

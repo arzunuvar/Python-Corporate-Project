@@ -1,0 +1,95 @@
+{% extends "homebase.html" %}
+
+{% block title %} Add Content {{ setting.company }} {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+
+{% block head %}
+    <link rel="shortcut icon" href="{{ setting.icon.url }}">
+
+    {% load static %}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+
+{% endblock %}
+
+
+{% block body %}
+
+    <!-- Start single page header -->
+    <section id="single-page-header">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="single-page-header-left">
+                            <h2>Add Content</h2>
+                            <p>Add Content Sayfasına Hoşgeldiniz..</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="single-page-header-right">
+                            <ol class="breadcrumb">
+                                <li><a href="/">Anasayfa</a></li>
+                                <li class="active">Add Content</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End single page header -->
+
+    <!-- Start contact section  -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                </div>
+                <div class="col-md-12">
+                    <div class="cotact-area">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="contact-area-left">
+                                    {% include "user_panel.html" %}
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+
+                                <h4 class="widget-title">ADD CONTENT</h4>
+
+
+                                <div class="content-section">
+                                    {% if messages %}
+                                        {% for message in messages %}
+                                            <div style="color:#d43f3a;font-size: medium">
+                                                {{ message|safe }}
+                                            </div>
+                                        {% endfor %}
+                                    {% endif %}
+                                    <form method="POST" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <fieldset class="form-group">
+                                            {{ form.media }}
+                                            {{ form.as_p }}
+                                        </fieldset>
+                                        <div class="form-group">
+                                            <button class="comment-btn" type="submit">Save</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End contact section  -->
+
+{% endblock %}
+
+
+
