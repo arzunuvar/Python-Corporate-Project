@@ -42,14 +42,13 @@
 
     <!-- Portfolio container -->
     <div id="mixit-container" class="portfolio-container">
-        {% for rs in faq %}
-            <div id="accordion">
-
-            <h3>{{ rs.question }}</h3>
-            <div>
-                <p>{{ rs.answer }}</p>
-            </div>
-        {% endfor %}
+        <div id="accordion">
+            {% for rs in faq %}
+                <h3>{{ rs.question }}</h3>
+                <div>
+                    <p>{{ rs.answer }}</p>
+                </div>
+            {% endfor %}
         </div>
     </div>
     <!-- End portfolio -->

@@ -14,7 +14,7 @@ def index(request):
     setting = Setting.objects.get(pk=1)
     sliderdata = Content.objects.all()[:3]
     category = Category.objects.all()
-
+    profil = UserProfile.objects.get(user_id=request.user.id)
     latestnews = Content.objects.raw(
         'SELECT content_content.* FROM content_content LEFT JOIN content_category ON content_content.category_id = content_category.id WHERE content_category.tree_id = 3')[
                  -3:]
@@ -32,6 +32,7 @@ def index(request):
 
     context = {'setting': setting,
                'page': 'home',
+               'profil': profil,
                'category': category,
                'sliderdata': sliderdata,
                'latestnews': latestnews,
