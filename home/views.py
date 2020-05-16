@@ -14,7 +14,11 @@ def index(request):
     setting = Setting.objects.get(pk=1)
     sliderdata = Content.objects.all()[:3]
     category = Category.objects.all()
-    profil = UserProfile.objects.get(user_id=request.user.id)
+    profil = None
+    currentuser_id = request.user.id
+    if currentuser_id is not None:
+        profil = UserProfile.objects.get(user_id=currentuser_id)
+
     latestnews = Content.objects.raw(
         'SELECT content_content.* FROM content_content LEFT JOIN content_category ON content_content.category_id = content_category.id WHERE content_category.tree_id = 3')[
                  -3:]
@@ -45,14 +49,22 @@ def index(request):
 def hakkimizda(request):
     setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
-    context = {'setting': setting, 'page': 'hakkimizda', 'category': category}
+    profil = None
+    currentuser_id = request.user.id
+    if currentuser_id is not None:
+        profil = UserProfile.objects.get(user_id=currentuser_id)
+    context = {'setting': setting, 'page': 'hakkimizda', 'category': category, 'profil': profil}
     return render(request, 'hakkimizda.html', context)
 
 
 def referanslar(request):
     setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
-    context = {'setting': setting, 'page': 'referanslar', 'category': category}
+    profil = None
+    currentuser_id = request.user.id
+    if currentuser_id is not None:
+        profil = UserProfile.objects.get(user_id=currentuser_id)
+    context = {'setting': setting, 'page': 'referanslar', 'category': category, 'profil': profil}
     return render(request, 'referanslarimiz.html', context)
 
 
@@ -72,8 +84,12 @@ def iletisim(request):
 
     setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
+    profil = None
+    currentuser_id = request.user.id
+    if currentuser_id is not None:
+        profil = UserProfile.objects.get(user_id=currentuser_id)
     form = ContactFormu()
-    context = {'setting': setting, 'form': form, 'category': category}
+    context = {'setting': setting, 'form': form, 'category': category, 'profil': profil}
     return render(request, 'iletisim.html', context)
 
 
@@ -81,12 +97,17 @@ def categories(request, id, slug):
     # setting = Setting.objects.get(pk=1)
     try:
         category = Category.objects.all()
+        profil = None
+        currentuser_id = request.user.id
+        if currentuser_id is not None:
+            profil = UserProfile.objects.get(user_id=currentuser_id)
         categorydata = Category.objects.get(pk=id)
         contents = Content.objects.filter(category_id=id)
     except:
         return HttpResponseRedirect("/error")
     context = {'categories': categories,
                'category': category,
+               'profil': profil,
                'contents': contents,
                'categorydata': categorydata
                }
@@ -96,13 +117,18 @@ def categories(request, id, slug):
 def content_detail(request, id, slug):
     # setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
+    profil = None
+    currentuser_id = request.user.id
+    if currentuser_id is not None:
+        profil = UserProfile.objects.get(user_id=currentuser_id)
+
     try:
         content = Content.objects.get(pk=id)
         images = Images.objects.filter(content_id=id)
         comments = Comment.objects.filter(content_id=id, status='True')
 
         context = {
-            'content': content, 'slug': slug, 'category': category, 'images': images, 'comments': comments,
+            'content': content, 'slug': slug, 'category': category, 'images': images, 'comments': comments, 'profil': profil,
         }
         return render(request, 'content_detail.html', context)
     except:
@@ -116,6 +142,10 @@ def content_search(request):
         form = SearchForm(request.POST)
         if form.is_valid():
             category = Category.objects.all()
+            profil = None
+            currentuser_id = request.user.id
+            if currentuser_id is not None:
+                profil = UserProfile.objects.get(user_id=currentuser_id)
             query = form.cleaned_data['query']
             catid = form.cleaned_data['catid']
             if catid == 0:
@@ -123,7 +153,7 @@ def content_search(request):
             else:
                 contents = Content.objects.filter(title__icontains=query, category_id=catid)
 
-            context = {'contents': contents, 'category': category}
+            context = {'contents': contents, 'category': category, 'profil': profil}
 
             return render(request, 'content_search.html', context)
 
@@ -194,18 +224,26 @@ def signup_view(request):
 
 def error(request):
     category = Category.objects.all()
+    profil = None
+    currentuser_id = request.user.id
+    if currentuser_id is not None:
+        profil = UserProfile.objects.get(user_id=currentuser_id)
     setting = Setting.objects.get(pk=1)
     context = {
-        'setting': setting, 'category': category,
+        'setting': setting, 'category': category, 'profil': profil,
     }
     return render(request, 'error_page.html', context)
 
 
 def faq(request):
     category = Category.objects.all()
+    profil = None
+    currentuser_id = request.user.id
+    if currentuser_id is not None:
+        profil = UserProfile.objects.get(user_id=currentuser_id)
     setting = Setting.objects.get(pk=1)
     faq = FAQ.objects.all().order_by('ordernumber')
     context = {
-        'setting': setting, 'category': category, 'faq': faq,
+        'setting': setting, 'category': category, 'faq': faq, 'profil': profil,
     }
     return render(request, 'faq.html', context)
