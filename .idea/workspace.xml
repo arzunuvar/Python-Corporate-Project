@@ -2,17 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f492e10-93bd-4168-9341-f6a435dd07e5" name="Default Changelist" comment="Ajax JQuery ile İçerik Aramada Otomatik tamamlama yapıldı.">
-      <change afterPath="$PROJECT_DIR$/uploads/images/images_vAZAS90_IiuTIy4_sBCbhbo_WcTxDmz.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/users/images_1_1SKZw83.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/images/gallery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/454303_m7yTgre_LVr2lyF.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/5878768818c7730db80a6d29_XXESFLy_OTSgcdg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/5878768818c7730db80a6d29_kiChsSV.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Egitim_gorselleri__Yazkampı_2019-2ec670cd-1415-4ef7-90f9-00e2bac84066_8MNfPuM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/about-photo_ONuUdcj_53iSVlx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_2_LdqRlxZ_gyyzDhs.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_4_NAMpaYt.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_10_CSiG1EH.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_3_EQ7TiJO_NqHJtGN.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_3xKDMYJ_xpgrSs0_qIlPR2i.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_4_KNHL4XI_2V17MnJ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/content_gallery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/content/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/content_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_comments.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_comments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/images/Thumbs.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/user/templates/user_contents.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_contents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,13 +88,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/user/templates" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\OzelKonular2\DjangoProje\home\templates" />
       <recent name="C:\OzelKonular2\DjangoProje\user\templates" />
+      <recent name="C:\OzelKonular2\DjangoProje\home\templates" />
       <recent name="C:\OzelKonular2\DjangoProje\menucontent" />
       <recent name="C:\OzelKonular2\DjangoProje\user" />
       <recent name="C:\OzelKonular2\DjangoProje\home\static" />
@@ -220,6 +229,7 @@
       <workItem from="1589581857022" duration="331000" />
       <workItem from="1589625487765" duration="590000" />
       <workItem from="1589631136442" duration="5330000" />
+      <workItem from="1589667099263" duration="5500000" />
     </task>
     <task id="LOCAL-00001" summary="slider kısmı tekrardan düzenlendi.">
       <created>1588016327856</created>

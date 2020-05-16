@@ -10,7 +10,7 @@
 
 
 {% block body %}
-
+{% load static %}
     <!-- Start single page header -->
     <section id="single-page-header">
         <div class="overlay">
@@ -58,6 +58,7 @@
                                             <th class="text-left">Image</th>
                                             <th class="text-left">Title</th>
                                             <th class="text-left">Category</th>
+                                            <th class="text-left">Gallery</th>
                                             <th class="text-left">Status</th>
                                             <th class="text-left">Date</th>
                                             <th class="text-left">Detail</th>
@@ -75,6 +76,11 @@
                                                     </a>
                                                 </td>
                                                 <td class="text-left">{{ rs.category.title }}</td>
+                                                <td class="text-left">
+                                                    <a href="javascript:;" onclick="window.open('/user/contentaddimage/{{ rs.id }}', 'galery', 'height=680,width=800,top=50,left=150')">
+                                                        <img src="{% static '' %}images/gallery.png" height="50">
+                                                    </a>
+                                                </td>
                                                 <td class="text-left">{{ rs.status }}</td>
                                                 <td class="text-left">{{ rs.create_at }}</td>
                                                 <td class="text-left">

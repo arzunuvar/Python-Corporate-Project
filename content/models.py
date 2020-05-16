@@ -116,3 +116,7 @@ class CommentForm(ModelForm):
         fields = ['subject', 'comment', 'rate']
 
 
+class ContentImageForm(ModelForm):
+    class Meta:
+        model = Images
+        fields = ['title', 'image']

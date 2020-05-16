@@ -6,7 +6,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from content.models import Category, Comment, Content
+from content.models import Category, Comment, Content, ContentImageForm, Images
 from home.models import UserProfile
 from menucontent.models import ContentForm
 from user.forms import UserUpdateForm, ProfileUpdateForm
@@ -148,3 +148,27 @@ def contentdelete(request, id):
     Content.objects.filter(id=id, user_id=current_user.id).delete()
     messages.success(request, 'Comment deleted..')
     return HttpResponseRedirect('/user/contents')
+
+
+def contentaddimage(request, id):
+    if request.method == 'POST':
+        lasturl = request.META.get('HTTP_REFERER')
+        form = ContentImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            data = Images()
+            data.title = form.cleaned_data['title']
+            data.content_id = id
+            data.image = form.cleaned_data['image']
+            data.save()
+            messages.success(request, 'Your image has been successfully uploaded')
+            return HttpResponseRedirect(lasturl)
+        else:
+            messages.warning(request, 'Form Error : '+ str(form.errors))
+            return HttpResponseRedirect(lasturl)
+    else:
+        content = Content.objects.get(id=id)
+        images =[]
+        images = Images.objects.filter(content_id=id)
+        form = ContentImageForm()
+        context = {'content': content, 'images': images, 'form': form}
+        return render(request, 'content_gallery.html', context)
