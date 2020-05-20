@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f492e10-93bd-4168-9341-f6a435dd07e5" name="Default Changelist" comment="Ajax JQuery ile İçerik Aramada Otomatik tamamlama yapıldı.">
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_1_O7oY2x8_HNmUKzm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_3_YtjKlOK_UbM2SLl_aqxsZ2N_2hhAFcK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/users/52127324.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/categories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_contents.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_contents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +216,9 @@
       <workItem from="1589625487765" duration="590000" />
       <workItem from="1589631136442" duration="5330000" />
       <workItem from="1589667099263" duration="5749000" />
-      <workItem from="1589716119233" duration="1039000" />
+      <workItem from="1589716119233" duration="1636000" />
+      <workItem from="1589911485177" duration="1230000" />
+      <workItem from="1589979700251" duration="1426000" />
     </task>
     <task id="LOCAL-00001" summary="slider kısmı tekrardan düzenlendi.">
       <created>1588016327856</created>
