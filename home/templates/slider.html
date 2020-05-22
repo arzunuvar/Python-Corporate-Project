@@ -3,25 +3,24 @@
 <section id="slider">
     <div class="main-slider">
         {% for rs in sliderdata %}
-        <div class="single-slide">
-            <img src="{{ rs.image.url }}" alt="img">
-            <div class="slide-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="slide-article">
-                                <h1 class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">{{ rs.title }}</h1>
-                                <p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.75s">{{ rs.description }}</p>
-                                <a class="read-more-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s" href="/content/{{ rs.id }}/{{ rs.slug }}">Daha Fazla İçerik</a>
+            <div class="single-slide">
+                <img src="{{ rs.image.url }}" alt="img">
+                <div class="slide-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="slide-article">
+                                    <h1 class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">{{ rs.title }}</h1>
+                                    <p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.75s">{{ rs.description }}</p>
+                                    <a class="read-more-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s" href="/content/{{ rs.id }}/{{ rs.slug }}">Daha Fazla İçerik</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-
+                            <div class="col-md-6 col-sm-6">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         {% endfor %}
     </div>
 </section>
