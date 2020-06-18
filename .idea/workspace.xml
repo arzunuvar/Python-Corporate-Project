@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f492e10-93bd-4168-9341-f6a435dd07e5" name="Default Changelist" comment="Ajax JQuery ile İçerik Aramada Otomatik tamamlama yapıldı.">
-      <change afterPath="$PROJECT_DIR$/uploads/images/images_1_7VR5pec_enVXUVF_ip86NtY.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/images_1_Bxw7Aul_eGHKMAO_nUqBHEK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/indir_1_O7oY2x8_HNmUKzm_vMQfVpP.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/liderlik-motivasyon_BEuNTvY.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_1_0TakqQb_jYtu4gW.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_1_7VR5pec_enVXUVF_qSrE21F.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_1_Bxw7Aul_eGHKMAO_sDcZyO6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images_u8h2Yyr_e30Npel_8WLg6hi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/liderlik-motivasyon_shNi4OG.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/hakkimizda.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/hakkimizda.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/iletisim.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/iletisim.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,6 +227,12 @@
       <workItem from="1590163174644" duration="1313000" />
       <workItem from="1590175121558" duration="1001000" />
       <workItem from="1590182844013" duration="2208000" />
+      <workItem from="1590238043441" duration="1582000" />
+      <workItem from="1590247240815" duration="644000" />
+      <workItem from="1590314173475" duration="3790000" />
+      <workItem from="1590346100702" duration="657000" />
+      <workItem from="1590602937769" duration="2089000" />
+      <workItem from="1590612395191" duration="160000" />
     </task>
     <task id="LOCAL-00001" summary="slider kısmı tekrardan düzenlendi.">
       <created>1588016327856</created>

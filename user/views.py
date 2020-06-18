@@ -162,11 +162,11 @@ def contentaddimage(request, id):
             messages.success(request, 'Your image has been successfully uploaded')
             return HttpResponseRedirect(lasturl)
         else:
-            messages.warning(request, 'Form Error : '+ str(form.errors))
+            messages.warning(request, 'Form Error : '+str(form.errors))
             return HttpResponseRedirect(lasturl)
     else:
         content = Content.objects.get(id=id)
-        images =[]
+        images = []
         images = Images.objects.filter(content_id=id)
         form = ContentImageForm()
         context = {'content': content, 'images': images, 'form': form}
